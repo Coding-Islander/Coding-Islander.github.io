@@ -5,6 +5,7 @@
   --header-height: 3rem;
   --font-semi: 600;
   /*===== Colors =====*/
+  --hue-color: 224;
   --bg-color: #f8f4ed;
   --first-color: #546fca;
   --second-color: #fc521b;
@@ -48,7 +49,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--black-color);
-  background-color: var(--bg-color);
+  background-color: #fff;
   transition: color 0.3s ease;
 }
 
