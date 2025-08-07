@@ -27,7 +27,7 @@
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
-                        <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                        <!-- <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li> -->
                         <!--
                             <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                             <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
@@ -185,38 +185,80 @@
             <!--===== COURSES =====-->
             <section class="courses section" id="courses">
                 <h2 class="section-title">Courses</h2>
-                <div class="courses__container bd-grid">                    
-                    <!-- Coming Soon Items -->
-                    <div class="courses__item coming-soon">
-                        <div class="coming-soon__content">
-                            <i class='bx bx-time-five coming-soon__icon'></i>
-                            <h3 class="coming-soon__title">Coming Soon</h3>
-                            <p class="coming-soon__text">Courses on the way!</p>
-                        </div>
+                <div class="courses__container" style="display:flex;flex-direction:column;align-items:center;">
+                    <button class="courses__nav-button courses__nav-prev" id="prevBtn">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <div class="courses__wrapper" id="coursesWrapper">
+                        <!-- <a href="course-advanced-sql.html" class="courses__item">
+                            <span class="courses__badge">MQA Approved</span>
+                            <img src="assets/img/sql-course.jpg" alt="Advanced SQL Course" class="courses__image">
+                            <div class="courses__content">
+                                <h3 class="courses__title">Advanced SQL for Professionals - Featuring AI Tools</h3>
+                                <p class="courses__description">
+                                    Master complex SQL concepts, query optimization, and modern reporting techniques. Featuring AI tools integration for enhanced productivity.
+                                </p>
+
+
+                                <span class="courses__button">
+                                    Learn More
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </span>
+                            </div>
+                        </a> -->
+
+                        <a href="course-advanced-sql.html" class="courses__item" style="width:100%;max-width:400px;margin:0 auto;">
+                            <span class="courses__badge">MQA Approved</span>
+                            <img src="assets/img/work4.jpg" alt="Advanced SQL Course" class="courses__image">
+                            <div class="courses__content" style="max-width:370px;width:100%;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,0.07);border-radius:18px;padding:24px;background:#fff;">
+                                <h3 class="courses__title">Advanced SQL for Professionals - Featuring AI Tools</h3>
+                                <!-- <p class="courses__description">
+                                    Master complex SQL concepts, query optimization, and modern reporting techniques. Featuring AI tools integration for enhanced productivity.
+                                </p> -->
+                                <div class="courses__meta">
+                                    <div class="courses__meta-flex">
+                                        <div class="courses__meta-item">
+                                            <i class='bx bx-time-five'></i>
+                                            <span>5 Days</span>
+                                        </div>
+                                        <div class="courses__meta-item">
+                                            <i class='bx bx-bar-chart-alt-2'></i>
+                                            <span>Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courses__trainer">
+                                    <div class="courses__trainer-info-flex">
+                                        <div class="courses__trainer-img">
+                                            <img src="assets/img/profile-pic.png" alt="Mehfooz Kausmally">
+                                        </div>
+                                        <span class="courses__trainer-name">Mehfooz Kausmally</span>
+                                    </div>
+                                </div>
+                                <span class="courses__button">
+                                    Learn More
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </span>
+                            </div>
+                        </a>
+                        
+                        <!-- More courses will be added here -->
+                        <!-- <div class="courses__item">
+                            <div class="courses__content coming-soon__content">
+                                <i class='bx bx-time-five coming-soon__icon'></i>
+                                <h3 class="coming-soon__title">More Courses Coming Soon</h3>
+                                <p class="coming-soon__text">Stay tuned for additional courses!</p>
+                            </div>
+                        </div> -->
                     </div>
-                    
-                    <!--
-                    <a href="" class="courses__item">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="courses__item">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="courses__item">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="courses__item">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="courses__item">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="courses__item">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                    -->
+                    <button class="courses__nav-button courses__nav-next" id="nextBtn">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
                 </div>
             </section>
+
+            <!--===== TESTIMONIALS =====-->
+
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
@@ -265,7 +307,7 @@
             </div>
             <p class="footer__copy">&#169; Coding Islander. All rigths reserved</p>
         </footer>
-        
+
         <!--===== SCROLL TOP =====-->
         <a href="#" class="back-to-top" id="scroll-top">
             <i class='bx bx-up-arrow-alt'></i>

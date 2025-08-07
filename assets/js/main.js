@@ -125,3 +125,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/*==================== COURSES CAROUSEL ====================*/
+document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.getElementById('coursesWrapper');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (wrapper && prevBtn && nextBtn) {
+        const scrollAmount = 340; // Width of card + gap
+
+        prevBtn.addEventListener('click', () => {
+            wrapper.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            wrapper.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Hide/show navigation buttons based on scroll position
+        wrapper.addEventListener('scroll', () => {
+            prevBtn.style.opacity = wrapper.scrollLeft > 0 ? '1' : '0.5';
+            nextBtn.style.opacity = 
+                wrapper.scrollLeft < (wrapper.scrollWidth - wrapper.clientWidth) ? '1' : '0.5';
+        });
+
+        // Initial button state
+        prevBtn.style.opacity = '0.5';
+    }
+});
