@@ -11,34 +11,309 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Coding Islander</title>
+        <title>Advanced SQL Training | Coding Islander</title>
     </head>
-<body>  
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html#home" class="nav__logo">
+                    <img src="assets/img/branding/logo.png" alt="Coding Islander">
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="index.html#courses" class="nav__link">Courses</a></li>
+                    <li class="nav__item"><a href="index.html#testimonials" class="nav__link">Testimonials</a></li>
+                    <!--
+                        <li class="nav__item"><a href="/index.html/#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                    -->
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
     <main class="l-main">
-        <section class="course section" id="course">
-            <h2 class="section-title">Advanced SQL Course</h2>
+        <section class="course section" id="course-page">
+            <div class="course-title-wrapper">
+                <h2 class="course-title">Advanced SQL for Professionals <br>Featuring AI Tools</h2>
+                <span class="mqa-badge">MQA Approved</span>
+            </div>
+
+            <nav class="course__nav">
+                <ul class="course__nav-list">
+                    <li><a href="#description" class="course__nav-link">Description</a></li>
+                    <li><a href="#who-for" class="course__nav-link">Audience</a></li>
+                    <li><a href="#modules" class="course__nav-link">Modules</a></li>
+                    <li><a href="#schedule" class="course__nav-link">Schedule</a></li>
+                    <li><a href="#register" class="course__nav-link">Register</a></li>
+                    <li><a href="#contact-for-more-info" class="course__nav-link">Contact</a></li>
+                </ul>
+            </nav>
 
             <div class="course__container bd-grid">
-                <div class="course__content">
-                    <h3 class="course__subtitle">Course Overview</h3>
-                    <p class="course__text">In this advanced SQL course, you will learn about complex queries, optimization techniques, and best practices for working with large datasets.</p>
+                <div class="course__content" id="description">
+                    <h3 class="course__subtitle">Training Overview</h3>
+                    <p class="course__text">This Advanced SQL training is designed for professionals looking to expand their SQL expertise with complex querying techniques, query performance optimization, and modern reporting techniques. Participants will gain hands-on experience on multi-table joins, subqueries, and foundational performance optimization using execution plans and indexes. They will explore reporting capabilities with grouping sets and pivoting for multidimensional data analysis, and powerful analytic functions for deeper insights and data presentation. Participants will also be introduced to AI Tools like GitHub Copilot to support SQL development and analysis. While the training is designed around T-SQL on SQL Server, those with SQL experience on other relational databases are encouraged to join, as the core concepts and logic apply broadly across platforms.</p>
                 </div>
 
-                <div class="course__content">
-                    <h3 class="course__subtitle">What You'll Learn</h3>
+                <div class="course__content" id="who-for">
+                    <h3 class="course__subtitle">Who is it for?</h3>
+                    <p class="course__text">This training is ideal for professionals with <strong>at least 2 years of experience in T-SQL or SQL</strong>, who <strong>already possess foundational to intermediate knowledge</strong>. The target audience for this training is:</p>
                     <ul class="course__list">
-                        <li class="course__item">Advanced JOIN operations</li>
-                        <li class="course__item">Subqueries and Common Table Expressions (CTEs)</li>
-                        <li class="course__item">Indexing and Query Optimization</li>
-                        <li class="course__item">Working with JSON and XML data</li>
+                        <li class="course__item">Data professionals working with relational databases</li>
+                        <li class="course__item">Developers and Testers who frequently query data and validate logic</li>
+                        <li class="course__item">Business Int elligence (BI) professionals and Analysts seeking more advanced querying and reporting techniques</li>
+                        <li class="course__item">Application support engineers performing in-depth analysis with SQL</li>
+                        <li class="course__item">IT practitioners who want to learn how to integrate AI tools into their SQL workflow responsibly and effectively</li>
                     </ul>
                 </div>
 
-                <div class="course__content">
-                    <h3 class="course__subtitle">Prerequisites</h3>
-                    <p class="course__text">Before taking this course, you should have a solid understanding of basic SQL concepts and be comfortable writing queries.</p>
+                <div class="course__content" id="modules">
+                    <h3 class="course__subtitle">What You'll Learn</h3>
+                    <p class="course__text">
+                        You'll gain practical skills through a mix of lectures, hands-on exercises, group work, and real-world projects - all designed to help you apply what you learn immediately. You'll explore the following modules:
+                    </p>
+                    <div class="module__list">
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">1. Setting up and exploring the Sample Database</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Installation of SQL Server Management Studio and Visual Studio Code</li>
+                                        <li>Connection to SQL Server</li>
+                                        <li>Exploring the sample database</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item active">
+                            <div class="module__header">
+                                <h4 class="module__title">2. Querying Multiple Tables with Joins</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Overview of the Join Concepts and Syntax</li>
+                                        <li>Understanding and implementing the different types of Joins: Inner Join, Outer Joins, Cross Join and Self Join</li>
+                                        <li>Performance considerations and best practices when joining multiple tables</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">3. Understanding Query Performance Optimization</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Analyzing query plans and enhancing query performance</li>
+                                        <li>Using Indexes to optimize performance while following Index Design recommended practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">4. Aggregate Functions</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Grouping with GROUP BY</li>
+                                        <li>Filtering groups with the HAVING clause</li>
+                                        <li>Managing NULLs</li>
+                                        <li>Avoiding common mistakes when filtering queries involving GROUP functions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">5. Advanced Reporting using Grouping Sets and Pivoting Data</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Implementing multiple groupings using Grouping Sets</li>
+                                        <li>Using ROLLUP and CUBE to create subtotals</li>
+                                        <li>Tips on identifying Groupings in Results</li>
+                                        <li>Pivoting Data using PIVOT while including aggregation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">6. Advanced Window and Analytic Functions</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Using ROW_NUMBER(), RANK() and DENSE_RANK() Window Functions</li>
+                                        <li>Understanding the importance of ORDER BY while working with certain Window functions</li>
+                                        <li>Using PARTITION BY to introduce aggregates in multiple levels - each partition</li>
+                                        <li>Using the LAG and LEAD functions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">7. Use of Artificial Intelligence for SQL</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Guidance on security best practices: respecting company policies, avoiding the sharing of sensitive or confidential data, and understanding the risks when using AI tools online</li>
+                                        <li>Using SQL-Aware AI Tools</li>
+                                        <li>Using GitHub Copilot as your AI pair programmer for SQL - exploring several use cases while writing good Prompts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module__item">
+                            <div class="module__header">
+                                <h4 class="module__title">8. Using Subqueries</h4>
+                                <i class='bx bx-chevron-down module__icon'></i>
+                            </div>
+                            <div class="module__content">
+                                <div class="module__content-inner">
+                                    <ul>
+                                        <li>Building Subqueries using Scalar and Multi-Valued subqueries</li>
+                                        <li>Understanding Self-Contained and Correlated subqueries</li>
+                                        <li>Understanding the use of EXISTS and the performance implication</li>
+                                        <li>Using derived tables</li>
+                                        <li>Using Common Table Expressions - Implementing reusable subqueries</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course__content" id="schedule">
+                    <h3 class="course__subtitle">Upcoming Batch</h3>
+                    <div class="course__text">
+                        <h4 class="course__section-heading">Course Fee</h4>
+                        <p class="course__price">
+                            <span style="text-decoration: line-through;">Rs 55,000</span> Rs 47,900 <br>
+                            <span>At only <strong>Rs 13,000</strong> approx. after up to 75% HRDC refund (<em>Conditions apply</em>).</span>
+                        </p>
+                        <ul class="course__list">
+                            <li class="course__item"><strong>MQA Approved</strong> Training Course</li>
+                            <li class="course__item">Up to 75% <strong>HRDC Refund</strong> available (Conditions apply)</li>
+                            <li class="course__item">Final course price after HRDC Refund: approx. <strong>Rs 13,000</strong></li>
+                        </ul>
+
+                        <h4 class="course__section-heading course__section-heading--spaced">October 2025 Batch Schedule</h4>
+                        <ul class="course__list">
+                            <li class="course__item">5 full-day intensive training</li>
+                            <li class="course__item">First 4 days: Online live sessions</li>
+                            <li class="course__item">Final day: In-person classroom session in Ebene, Mauritius (venue to be confirmed)</li>
+                            <li class="course__item">Exact dates to be announced</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course__content" id="register">
+                    <h3 class="course__subtitle">Express Your Interest</h3>
+                    <p class="course__text">
+                        Don't miss your chance to advance your SQL skills with this exclusive training! Register your interest below and secure your spot for priority access. All key details, including the confirmed venue and final schedule, will be shared with you as soon as they are finalized. Fill out the form below to register your interest.
+                    </p>
+                    <div class="course__form-container">
+                        <!-- Replace the src URL below with your actual Microsoft Form embed URL -->
+                        <!-- <iframe src="YOUR_MICROSOFT_FORM_URL_HERE" frameborder="0" allowfullscreen></iframe> -->
+                        <!-- <iframe width="640px" height="480px"  -->
+                        <iframe width="640px" height="480px" src="https://forms.cloud.microsoft/r/Wf25mEHZ5X?embed=true" 
+                        frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" 
+                        allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+                         <!-- <iframe width="640px" 
+                        src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=LRv0ft-wyEiLDMZJf98mrJtIWz8IONFNmu9AyPmOGwZUN0tXMDBBMVhZVDlIR1IwNlE0UVhDNDM3WS4u&embed=true" 
+                        frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" 
+                        allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe> -->
+                    </div>
+                </div>
+
+                <div class="course__content" id="contact-for-more-info">
+                    <h3 class="course__subtitle">Need More Information?</h3>
+                    <p class="course__text">
+                        Have questions about the training? We're here to help! Reach out to us through the appropriate channel below:
+                    </p>
+                    <div class="course__contact-grid">
+                        <div class="course__contact-item">
+                            <h4 class="course__contact-title">
+                                <i class='bx bx-code-alt'></i>
+                                Technical & Course Content
+                            </h4>
+                            <p>For questions about course content, technical requirements, or learning objectives, contact the trainer directly:</p>
+                            <p class="course__contact-info">
+                                <a href="index.html#contact" class="course__contact-link">Contact Us</a>
+                            </p>
+                        </div>
+                        <div class="course__contact-item">
+                            <h4 class="course__contact-title">
+                                <i class='bx bx-badge-check'></i>
+                                Registration & HRDC Refund
+                            </h4>
+                            <p>For registration process, HRDC refund queries, and administrative matters, contact Honoris:</p>
+                            <p class="course__contact-info">
+                                <i class='bx bx-phone'></i> (Phone number)
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </section>
     </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <img class="footer__logo" src="assets/img/branding/logo.png" alt="Coding Islander">
+        
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/mehfoozkausmally/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <p class="footer__copy">&#169; Coding Islander. All rigths reserved</p>
+    </footer>
+
+    <!--===== SCROLL TOP =====-->
+    <a href="#" class="back-to-top" id="scroll-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    
 </body>
