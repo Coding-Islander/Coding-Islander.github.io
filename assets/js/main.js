@@ -55,6 +55,7 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.testimonial__card',{ interval: 200 }); // Add this line
 
 /*==================== COURSE PAGE NAVIGATION ====================*/
 document.addEventListener('DOMContentLoaded', function() {
@@ -134,6 +135,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (wrapper && prevBtn && nextBtn) {
         const scrollAmount = 340; // Width of card + gap
+        const courseItems = wrapper.querySelectorAll('.courses__item');
+
+        // Disable navigation if only one course
+        if (courseItems.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            return;
+        }
 
         prevBtn.addEventListener('click', () => {
             wrapper.scrollBy({
