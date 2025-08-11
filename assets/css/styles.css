@@ -402,7 +402,7 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: 50% 20%; /* This will shift focus to the upper part of the image */
-    transform: scale(1.2); /* Makes the image slightly larger to improve clarity */
+    transform: scale(1.1); /* Makes the image slightly larger to improve clarity */
 }
 .courses__trainer-name {
   font-weight: 500;
