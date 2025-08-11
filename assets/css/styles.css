@@ -207,11 +207,11 @@ img {
 .home__social-icon {
   width: max-content;
   margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
-  color: var(--black-color);
+  font-size: 1.75rem;
+  color: var(--first-color);
 }
 .home__social-icon:hover {
-  color: var(--first-color);
+  color: var(--second-color);
 }
 .home__img {
   position: absolute;
@@ -769,7 +769,7 @@ img {
   margin-bottom: var(--mb-4);
 }
 .footer__icon {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #fff;
   margin: 0 var(--mb-2);
 }
@@ -804,6 +804,7 @@ img {
     align-self: flex-end;
   }
   .home__social-icon {
+    font-size: 2.5rem;
     margin-bottom: 0;
     margin-right: var(--mb-4);
   }
