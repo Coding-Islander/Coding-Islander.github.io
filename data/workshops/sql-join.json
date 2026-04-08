@@ -1,0 +1,85 @@
+{
+  "title": "Understanding SQL Joins",
+  "type": "workshop",
+  "heroImage": "/assets/img/work1.jpg",
+  "youtubeVideoId": "https://www.youtube.com/watch?v=yb2cLMMuMdQ&t=1s",
+  "headline": "Write Complex SQL Joins With Confidence in Just 2 Sessions",
+  "subheadline": "Struggling with joins in real-world scenarios? This hands-on workshop helps you actually build them.",
+
+  "painPoints": [
+    "You understand joins in theory but can't apply them in real projects",
+    "You get confused when multiple tables are involved",
+    "You rely on Google or Stack Overflow for basic queries",
+    "You avoid writing joins and ask someone else to do it"
+  ],
+
+  "transformation": [
+    "Write multi-table joins confidently from scratch",
+    "Understand when to use INNER, LEFT, RIGHT, FULL, CROSS, and SELF joins",
+    "Debug broken queries faster by reading execution flow",
+    "Handle real-world data relationships without hesitation"
+  ],
+
+  "whatYouWillDo": [
+    "Solve practical SQL challenges using realistic datasets",
+    "Build multi-table queries step-by-step with live guidance",
+    "Work through real-world scenarios involving orders, customers, and products",
+    "Practice debugging incorrect joins and fixing common mistakes"
+  ],
+
+  "prerequisites": "You should have basic SQL experience - you can write SELECT, WHERE, and simple GROUP BY queries. No advanced knowledge is needed. You'll need access to SQL Server Management Studio or Azure Data Studio.",
+
+  "whyDifferent": [
+    "Live query building with real datasets - not slides",
+    "Hands-on exercises throughout every session",
+    "Real-world scenarios instead of textbook theory",
+    "Small group size so you can ask questions and get direct feedback",
+    "The databases and sandbox remains available to keep practicing after the workshop",
+    "Badge is assigned to your LinkedIn profile to showcase your new skills to employers",
+    "Can also add recordings etc.."
+ ],
+
+  "instructor": {
+    "name": "Mehfooz Kausmally",
+    "description": "A seasoned software professional from Mauritius with over a decade of experience in the IT industry. After a successful career as a developer in multinational companies working extensively with complex databases and backend systems, Mehfooz transitioned into full-time professional coaching. He has already guided over 270 engineers across different technologies and levels  bringing real-world expertise and a practical, hands-on approach into every session."
+  },
+
+  "format": {
+    "mode": "Online, Live Sessions",
+    "language": "Mauritian Creole and English",
+    "batchSize": 15
+  },
+
+  "paid": true,
+  "price": "Rs 5,500",
+  "promotionPrice": "Rs 3,500",
+
+  "batches": [
+    {
+      "startDate": "2026-05-10",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-join-batch1"
+    },
+    {
+      "startDate": "2026-05-10",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday", "Sunday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-join-batch1"
+    },
+    {
+      "startDate": "2026-05-10",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-join-batch1"
+    }
+  ],
+
+  "cta": "Book Your Seat"
+}
