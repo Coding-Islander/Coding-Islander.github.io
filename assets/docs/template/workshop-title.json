@@ -1,0 +1,84 @@
+{
+  "title": "",
+  "type": "",
+  "heroImage": "",
+  "youtubeVideoId": "",
+  "headline": "",
+  "subheadline": "",
+
+  "painPoints": [
+    "",
+    "",
+    "",
+    ""
+  ],
+
+  "transformation": [
+    "",
+    "",
+    "",
+    ""
+  ],
+
+  "whatYouWillDo": [
+    "",
+    "",
+    "",
+    ""
+  ],
+
+  "prerequisites": "",
+
+  "whyDifferent": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+ ],
+
+  "instructor": {
+    "name": "",
+    "credentials": [],
+    "description": ""
+  },
+
+  "format": {
+    "mode": "Online, Live Sessions",
+    "language": "Mauritian Creole and English",
+    "batchSize": 15
+  },
+
+  "paid": true,
+  "price": "",
+  "promotionPrice": "",
+
+  "batches": [
+    {
+      "startDate": "2026-05-10",
+      "endDate": "",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-join-batch1",
+      "visible": true,
+      "fullyBooked": false
+    },
+    {
+      "startDate": "2026-05-10",
+      "endDate": "",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday", "Sunday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-join-batch1",
+      "visible": true,
+      "fullyBooked": false
+    }
+  ],
+
+  "cta": "Book Your Seat"
+}

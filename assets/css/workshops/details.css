@@ -22,6 +22,12 @@
     align-items: flex-start;
 }
 
+/* On mobile: show image stacked below content */
+.workshop-hero__container.workshop-hero--has-image .workshop-hero__image {
+    display: block;
+    margin-top: 2rem;
+}
+
 .workshop-hero__content {
     flex: 1;
 }
@@ -109,6 +115,8 @@
 .workshop-section__container {
     max-width: 800px;
     margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .workshop-section--alt {
@@ -219,12 +227,37 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
 }
 
 .workshop-instructor__name {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
     color: var(--first-color);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.workshop-instructor__credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.workshop-instructor__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #eef1fc;
+    color: var(--first-color);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi);
+    padding: 0.3rem 0.75rem;
+    border-radius: 2rem;
+    border: 1px solid #c5cef5;
+}
+
+.workshop-instructor__badge i {
+    font-size: 1rem;
 }
 
 /* ===== FORMAT & LOGISTICS (includes pricing) ===== */
@@ -334,10 +367,33 @@
     border-left: 4px solid var(--first-color);
 }
 
+.workshop-batch-card--full {
+    border-left-color: #aaa;
+    opacity: 0.72;
+}
+
 .workshop-batch-card__title {
     font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     color: var(--first-color);
     margin-bottom: 1rem;
+}
+
+.workshop-batch-card--full .workshop-batch-card__title {
+    color: #777;
+}
+
+.workshop-batch-card__fully-booked {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+    background-color: #e8e8e8;
+    color: #555;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.4rem;
+    letter-spacing: 0.03em;
 }
 
 .workshop-batch-card__row {
@@ -359,6 +415,13 @@
     min-width: 5.5rem;
 }
 
+.workshop-batch-card__row-note {
+    font-size: 0.7rem;
+    color: #888;
+    margin-left: 0.3rem;
+    font-weight: normal;
+}
+
 .workshop-batch-card__register {
     display: inline-block;
     margin-top: 1.25rem;
@@ -368,6 +431,73 @@
 
 .workshop-batch-card__register:hover {
     background-color: #e04310;
+}
+
+/* ===== MINI CALENDAR ===== */
+.workshop-batch-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.workshop-batch-card__details {
+    flex: 1;
+}
+
+.mini-cal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.mini-cal__month {
+    width: 200px;
+}
+
+.mini-cal__header {
+    font-weight: var(--font-semi);
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.mini-cal__row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.mini-cal__row--head {
+    margin-bottom: 0.15rem;
+}
+
+.mini-cal__day-name {
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: var(--font-semi);
+    color: #999;
+    text-transform: uppercase;
+}
+
+.mini-cal__cell {
+    text-align: center;
+    font-size: 0.65rem;
+    padding: 0.15rem 0;
+    color: #777;
+    border-radius: 50%;
+    line-height: 1.6;
+}
+
+.mini-cal__cell--empty {
+    visibility: hidden;
+}
+
+.mini-cal__cell--active {
+    background-color: var(--first-color);
+    color: #fff;
+    font-weight: var(--font-semi);
 }
 
 .workshop-batches__none {
@@ -406,7 +536,7 @@
 .workshop-browse {
     text-align: center;
     padding: 3rem 1rem;
-    background-color: #fff;
+    background-color: var(--bg-color);
 }
 
 .workshop-browse__container {
@@ -473,6 +603,7 @@
 
     .workshop-hero__container.workshop-hero--has-image .workshop-hero__image {
         display: block;
+        margin-top: 0;
     }
 
     .workshop-instructor {
@@ -486,7 +617,20 @@
     }
 
     .workshop-batches {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
+
+    .workshop-batch-card__body {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .mini-cal {
+        border-top: none;
+        border-left: 1px solid #eee;
+        padding-top: 0;
+        padding-left: 0.5rem;
     }
 
     .workshop-list {
@@ -502,6 +646,10 @@
 
     .workshop-hero__container {
         max-width: 900px;
+    }
+
+    .workshop-batches {
+        max-width: 100%;
     }
 
     .workshop-format {

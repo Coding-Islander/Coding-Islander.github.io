@@ -1,0 +1,97 @@
+{
+  "title": "SQL JOINS Workshop",
+  "type": "workshop",
+  "heroImage": "/assets/img/workshops/sql-joins.jpg",
+  "youtubeVideoId": "",
+  "headline": "Stop Guessing Which JOIN to Use - Start Knowing",
+  "subheadline": "A live, hands-on workshop where you'll write, debug and master all 6 types of SQL JOINs across real-world scenarios.",
+
+  "painPoints": [
+    "You know INNER JOIN works... but LEFT, RIGHT and FULL OUTER all blur together",
+    "Your query drops rows - and you have no idea why",
+    "Once three or more tables are involved, you're guessing rather than reasoning",
+    "You've memorised the syntax but you can't confidently explain what the result actually means"
+  ],
+
+  "transformation": [
+    "Pick the right JOIN type instantly for any scenario - no more trial and error",
+    "Write multi-table queries across 3, 4 or more tables without losing the thread",
+    "Trace exactly why a row is included or excluded from your results",
+    "Write joins that are clean, correct and built with performance in mind"
+  ],
+
+  "whatYouWillDo": [
+    "Build all 6 JOIN types (INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF) from scratch on real datasets",
+    "Work through multi-table queries involving orders, customers, products and more",
+    "Analyse real results and explain why specific rows appear or disappear",
+    "Spot and fix broken joins through live guided exercises and corrections",
+    "Apply best practices and performance considerations when writing joins in production"
+  ],
+
+  "prerequisites": "You should be comfortable writing basic SELECT queries with WHERE clauses. You don't need to know Joins already - that's exactly what we'll cover. Access to Database will be provided during the workshop.",
+
+  "whyDifferent": [
+    "Every concept is coded live on real data - not presented on slides you'll forget tomorrow",
+    "Hands-on exercises after each topic, with live corrections so you understand exactly where you went wrong",
+    "The sandbox database stays available after the workshop - keep practising on the same real data",
+    "Recordings stay accessible for a period so you can revisit any explanation at your own pace",
+    "Cheatsheets provided - a practical reference you'll keep opening long after the last session",
+    "Maximum 15 participants so you get real attention, real answers and real feedback - not a seat in a crowd",
+    "Delivered in a mix of Mauritian Creole and English - designed so the concepts actually stick",
+    "A badge to showcase your new skills on LinkedIn and get noticed by employers"
+  ],
+
+  "instructor": {
+    "name": "Mehfooz Kausmally",
+    "credentials": ["Certified SQL Expert", "Approved Trainer"],
+    "description": "A seasoned software professional from Mauritius with over a decade of experience in the IT industry. After a successful career as a developer in multinational companies working extensively with complex databases and backend systems, Mehfooz transitioned into full-time professional coaching. He has already guided over 270 engineers across different technologies and levels - bringing real-world expertise and a practical, hands-on approach into every session."
+  },
+
+  "format": {
+    "mode": "Online, Live Sessions",
+    "language": "Mauritian Creole and English",
+    "batchSize": 15
+  },
+
+  "paid": true,
+  "price": "Rs 3,500",
+  "promotionPrice": "Rs 2,500",
+
+  "batches": [
+    {
+      "startDate": "2026-05-10",
+      "endDate": "2026-06-17",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday", "Sunday"],
+      "numberOfWeeks": 5,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-joins-batch1",
+      "visible": false,
+      "fullyBooked": false
+    },
+    {
+      "startDate": "2026-08-11",
+      "endDate": "2026-08-20",
+      "time": "20:00 - 22:00",
+      "days": ["Tuesday", "Thursday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "2 hours",
+      "registrationLink": "https://forms.office.com/example-sql-joins-batch1",
+      "visible": true,
+      "fullyBooked": false
+    },
+    {
+      "startDate": "2026-08-22",
+      "endDate": "2026-09-12",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday"],
+      "numberOfWeeks": 4,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-sql-joins-batch1",
+      "visible": false,
+      "fullyBooked": true
+    }
+  ],
+
+  "cta": "Book Your Seat"
+}

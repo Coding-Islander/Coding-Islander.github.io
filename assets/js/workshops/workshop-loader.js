@@ -98,6 +98,18 @@ function renderWorkshop(data) {
     // 8. Instructor
     if (data.instructor) {
         setText('instructor-name', data.instructor.name);
+        if (data.instructor.credentials && data.instructor.credentials.length) {
+            var credContainer = document.getElementById('instructor-credentials');
+            if (credContainer) {
+                credContainer.innerHTML = '';
+                data.instructor.credentials.forEach(function (cred) {
+                    var badge = document.createElement('span');
+                    badge.className = 'workshop-instructor__badge';
+                    badge.innerHTML = '<i class="bx bx-check-shield"></i> ' + escapeHtml(cred);
+                    credContainer.appendChild(badge);
+                });
+            }
+        }
         setText('instructor-description', data.instructor.description);
     }
 
@@ -171,7 +183,7 @@ function renderPricing(data, typeLabel) {
         return;
     }
 
-    var priceHtml = '<i class="bx bx-purchase-tag"></i><div><strong>Price</strong><div class="workshop-format__pricing-values">';
+    var priceHtml = '<i class="bx bx-purchase-tag"></i><div><strong>Investment</strong><div class="workshop-format__pricing-values">';
     if (data.promotionPrice) {
         priceHtml += '<span class="workshop-format__price-old">' + escapeHtml(data.price) + '</span>';
         priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.promotionPrice) + '</span>';
@@ -188,7 +200,12 @@ function renderBatches(batches) {
     if (!container) return;
     container.innerHTML = '';
 
-    if (!batches || batches.length === 0) {
+    // Filter out batches explicitly marked as not visible
+    var visibleBatches = (batches || []).filter(function (b) {
+        return b.visible !== false;
+    });
+
+    if (visibleBatches.length === 0) {
         var msg = document.createElement('div');
         msg.className = 'workshop-batches__none';
         msg.innerHTML = '<p>No upcoming batches are currently scheduled.</p>' +
@@ -197,17 +214,17 @@ function renderBatches(batches) {
         return;
     }
 
-    // Show CTA message only when batches exist
+    // Show CTA message only when visible batches exist
     var batchesCta = document.getElementById('batches-cta');
     if (batchesCta) batchesCta.style.display = '';
 
-    batches.forEach(function (batch, index) {
+    visibleBatches.forEach(function (batch) {
         var card = document.createElement('div');
-        card.className = 'workshop-batch-card';
+        card.className = 'workshop-batch-card' + (batch.fullyBooked ? ' workshop-batch-card--full' : '');
 
         var heading = document.createElement('h3');
         heading.className = 'workshop-batch-card__title';
-        heading.textContent = batches.length > 1 ? 'Batch ' + (index + 1) : 'Next Batch';
+        heading.textContent = 'Batch ' + formatDate(batch.startDate);
         card.appendChild(heading);
 
         var totalSessions = '';
@@ -217,23 +234,48 @@ function renderBatches(batches) {
         }
 
         var details = [
-            { icon: 'bx bx-calendar', label: 'Starts', value: formatDate(batch.startDate) },
-            { icon: 'bx bx-time-five', label: 'Time', value: batch.time },
+            { icon: 'bx bx-calendar', label: 'Starts', value: formatDateWithDay(batch.startDate) },
+            { icon: 'bx bx-calendar-check', label: 'Ends', value: formatDateWithDay(batch.endDate) },
             { icon: 'bx bx-calendar-week', label: 'Days', value: batch.days ? 'Every ' + batch.days.join(' & ') : '' },
+            { icon: 'bx bx-time-five', label: 'Time', value: batch.time, note: 'Mauritius time' },
+            { icon: 'bx bx-hourglass', label: 'Per session', value: batch.hoursPerDay },
             { icon: 'bx bx-revision', label: 'Duration', value: batch.numberOfWeeks ? batch.numberOfWeeks + ' week' + (batch.numberOfWeeks > 1 ? 's' : '') : '' },
-            { icon: 'bx bx-layer', label: 'Sessions', value: totalSessions },
-            { icon: 'bx bx-hourglass', label: 'Per session', value: batch.hoursPerDay }
+            { icon: 'bx bx-layer', label: 'Sessions', value: totalSessions }
         ];
+
+        // Body: details on left, calendar on right
+        var body = document.createElement('div');
+        body.className = 'workshop-batch-card__body';
+
+        var detailsWrap = document.createElement('div');
+        detailsWrap.className = 'workshop-batch-card__details';
 
         details.forEach(function (d) {
             if (!d.value) return;
             var row = document.createElement('div');
             row.className = 'workshop-batch-card__row';
-            row.innerHTML = '<i class="' + escapeAttr(d.icon) + '"></i><strong>' + escapeHtml(d.label) + ':</strong> <span>' + escapeHtml(d.value) + '</span>';
-            card.appendChild(row);
+            var noteHtml = d.note ? ' <small class="workshop-batch-card__row-note">' + escapeHtml(d.note) + '</small>' : '';
+            row.innerHTML = '<i class="' + escapeAttr(d.icon) + '"></i><strong>' + escapeHtml(d.label) + ':</strong> <span>' + escapeHtml(d.value) + noteHtml + '</span>';
+            detailsWrap.appendChild(row);
         });
 
-        if (batch.registrationLink) {
+        body.appendChild(detailsWrap);
+
+        // Mini calendar
+        var sessionDates = getSessionDates(batch);
+        if (sessionDates.length > 0) {
+            var calEl = renderMiniCalendar(sessionDates);
+            body.appendChild(calEl);
+        }
+
+        card.appendChild(body);
+
+        if (batch.fullyBooked) {
+            var fullBadge = document.createElement('div');
+            fullBadge.className = 'workshop-batch-card__fully-booked';
+            fullBadge.innerHTML = '<i class="bx bx-lock-alt"></i> Fully Booked';
+            card.appendChild(fullBadge);
+        } else if (batch.registrationLink) {
             var link = document.createElement('a');
             link.href = batch.registrationLink;
             link.target = '_blank';
@@ -251,6 +293,99 @@ function formatDate(dateStr) {
     if (!dateStr) return '';
     var d = new Date(dateStr + 'T00:00:00');
     return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function formatDateWithDay(dateStr) {
+    if (!dateStr) return '';
+    var d = new Date(dateStr + 'T00:00:00');
+    return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+var DAY_MAP = { 'sunday': 0, 'monday': 1, 'tuesday': 2, 'wednesday': 3, 'thursday': 4, 'friday': 5, 'saturday': 6 };
+
+function getSessionDates(batch) {
+    if (!batch.startDate || !batch.days || !batch.days.length || !batch.numberOfWeeks) return [];
+    var start = new Date(batch.startDate + 'T00:00:00');
+    var targetDays = batch.days.map(function (d) { return DAY_MAP[d.toLowerCase()]; }).filter(function (d) { return d !== undefined; });
+    var dates = [];
+    for (var week = 0; week < batch.numberOfWeeks; week++) {
+        targetDays.forEach(function (dayNum) {
+            var dt = new Date(start);
+            dt.setDate(start.getDate() + (week * 7) + ((dayNum - start.getDay() + 7) % 7));
+            dates.push(new Date(dt));
+        });
+    }
+    dates.sort(function (a, b) { return a - b; });
+    return dates;
+}
+
+function renderMiniCalendar(sessionDates) {
+    // Group dates by month
+    var months = {};
+    sessionDates.forEach(function (d) {
+        var key = d.getFullYear() + '-' + d.getMonth();
+        if (!months[key]) months[key] = { year: d.getFullYear(), month: d.getMonth(), dates: [] };
+        months[key].dates.push(d.getDate());
+    });
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'mini-cal';
+
+    Object.keys(months).forEach(function (key) {
+        var m = months[key];
+        var grid = document.createElement('div');
+        grid.className = 'mini-cal__month';
+
+        // Month/year header
+        var header = document.createElement('div');
+        header.className = 'mini-cal__header';
+        header.textContent = new Date(m.year, m.month).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+        grid.appendChild(header);
+
+        // Day-of-week header row
+        var dayNames = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+        var headRow = document.createElement('div');
+        headRow.className = 'mini-cal__row mini-cal__row--head';
+        dayNames.forEach(function (dn) {
+            var c = document.createElement('span');
+            c.className = 'mini-cal__day-name';
+            c.textContent = dn;
+            headRow.appendChild(c);
+        });
+        grid.appendChild(headRow);
+
+        // Calendar cells
+        var firstDay = new Date(m.year, m.month, 1);
+        var startCol = (firstDay.getDay() + 6) % 7; // Monday-based
+        var daysInMonth = new Date(m.year, m.month + 1, 0).getDate();
+        var row = document.createElement('div');
+        row.className = 'mini-cal__row';
+
+        for (var i = 0; i < startCol; i++) {
+            var empty = document.createElement('span');
+            empty.className = 'mini-cal__cell mini-cal__cell--empty';
+            row.appendChild(empty);
+        }
+
+        for (var day = 1; day <= daysInMonth; day++) {
+            var cell = document.createElement('span');
+            cell.className = 'mini-cal__cell';
+            cell.textContent = day;
+            if (m.dates.indexOf(day) !== -1) {
+                cell.classList.add('mini-cal__cell--active');
+            }
+            row.appendChild(cell);
+            if ((startCol + day) % 7 === 0 && day < daysInMonth) {
+                grid.appendChild(row);
+                row = document.createElement('div');
+                row.className = 'mini-cal__row';
+            }
+        }
+        grid.appendChild(row);
+        wrapper.appendChild(grid);
+    });
+
+    return wrapper;
 }
 
 function escapeHtml(str) {

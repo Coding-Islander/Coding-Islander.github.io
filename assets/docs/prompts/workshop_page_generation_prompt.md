@@ -1,11 +1,17 @@
-# Generate Workshop Landing Page
+# Generate Workshop Landing Page Content in form of json format
 
 ## Instructions
 
 Use the guidelines defined in:
-`/docs/guidelines/workshop_page_guidelines.md`
+`assets/docs/guidelines/workshop_page_guidelines.md`
 
-Generate a high-converting landing page for a technical workshop using the input provided.
+Use the json workshop template defined in:
+`assets/docs/template/workshop-title.json`
+
+For info, the following html page is used to load the data from the json file:
+`workshops/details.html`
+
+Generate a high-converting landing page content for a technical workshop using the input provided.
 
 ---
 
@@ -25,25 +31,9 @@ The workshop details will be provided below.
 
 ---
 
-## Output अपेctions
-- Generate a complete landing page in markdown
-- Include all required sections from the guidelines:
-  - Hero
-  - Pain points
-  - Transformation
-  - Why this workshop is different
-  - What we’ll work on
-  - About instructor
-  - Social proof
-  - Format & logistics
-  - Pricing
-  - CTA
+## Output Actions
+- Generate a complete landing page content in json format
+- Include all required sections from the json workshop template
+- Json file should be outputted in the following folder:
+`data/workshops`
 
-
----
-
-## Instruction
-
-Now generate the landing page based on the following workshop input:
-
-javascript: workshop-loader.js
