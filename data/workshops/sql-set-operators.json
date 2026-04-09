@@ -3,19 +3,19 @@
   "type": "webinar",
   "heroImage": "/assets/img/workshops/sql-set-operators.jpg",
   "youtubeVideoId": "",
-  "headline": "UNION, INTERSECT, EXCEPT — Finally Understand When to Use Which",
-  "subheadline": "A free live session where you'll see SQL Set Operators explained with real examples, clear visuals and zero confusion — so you never mix them up again.",
+  "headline": "UNION, INTERSECT, EXCEPT - Finally Understand When to Use Which",
+  "subheadline": "A free live session where you'll see SQL Set Operators explained with real examples, clear visuals and zero confusion - so you never mix them up again.",
 
   "painPoints": [
     "You use UNION everywhere but have no idea when UNION ALL is the better choice",
-    "INTERSECT sounds like it does the same thing as a JOIN — and you can't explain the difference",
+    "INTERSECT sounds like it does the same thing as a JOIN - and you can't explain the difference",
     "EXCEPT exists somewhere in your memory, but you've never been sure when to actually use it",
     "You avoid Set Operators entirely because the results never match what you expected"
   ],
 
   "transformation": [
     "Clearly distinguish between UNION and UNION ALL and know exactly when each one applies",
-    "Understand why INTERSECT is not a JOIN — and confidently explain the difference to anyone",
+    "Understand why INTERSECT is not a JOIN - and confidently explain the difference to anyone",
     "Know when EXCEPT is the right tool and recognise the scenarios where it saves you time",
     "Have a simple mental framework to pick the correct Set Operator for any given situation"
   ],
@@ -24,18 +24,18 @@
     "Watch a live walkthrough of UNION and UNION ALL with side-by-side result comparisons on real data",
     "See INTERSECT explained visually and compared against JOINs so the difference clicks once and for all",
     "Follow a clear demo of EXCEPT queries and discover practical scenarios where they shine",
-    "Walk away with a set of guidelines on when to use which operator — backed by real-world use cases"
+    "Walk away with a set of guidelines on when to use which operator - backed by real-world use cases"
   ],
 
-  "prerequisites": "Basic familiarity with SELECT queries is helpful. This webinar is designed to be approachable — just show up with curiosity.",
+  "prerequisites": "Basic familiarity with SELECT queries is helpful. This webinar is designed to be approachable - just show up with curiosity.",
 
   "whyDifferent": [
-    "Every operator is explained live on real data — not abstract theory you'll forget by tomorrow",
+    "Every operator is explained live on real data - not abstract theory you'll forget by tomorrow",
     "Practical use cases are demoed so you see exactly where each operator fits in real work",
-    "The difference between INTERSECT and JOINs is tackled head-on — no more silent confusion",
+    "The difference between INTERSECT and JOINs is tackled head-on - no more silent confusion",
     "Recordings remain available for a period so you can revisit any explanation at your own pace",
-    "Cheatsheets provided — a quick-reference guide you'll keep coming back to",
-    "Delivered in a mix of Mauritian Creole and English — designed so the concepts actually stick",
+    "Cheatsheets provided - a quick-reference guide you'll keep coming back to",
+    "Delivered in a mix of Mauritian Creole and English - designed so the concepts actually stick",
     "Live Q&A included so your specific questions get answered on the spot"
   ],
 
