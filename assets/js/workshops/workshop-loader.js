@@ -118,12 +118,12 @@ function renderWorkshop(data) {
         setText('format-mode', data.format.mode);
         setText('format-language', data.format.language);
         var batchSize = data.format.batchSize;
-        setText('format-batch-size', batchSize ? batchSize + ' participants' : '');
+        setText('format-batch-size', batchSize ? batchSize : '');
     }
     renderPricing(data, typeLabel);
 
     // 10. Batches
-    renderBatches(data.batches);
+    renderBatches(data.batches, data.paid === false);
 }
 
 /* ---- Helpers ---- */
@@ -195,7 +195,7 @@ function renderPricing(data, typeLabel) {
     formatGrid.appendChild(pricingRow);
 }
 
-function renderBatches(batches) {
+function renderBatches(batches, isFree) {
     var container = document.getElementById('batches-content');
     if (!container) return;
     container.innerHTML = '';
@@ -233,13 +233,15 @@ function renderBatches(batches) {
             totalSessions = count + ' session' + (count > 1 ? 's' : '');
         }
 
+        var isSingleDay = batch.numberOfWeeks === 1;
+
         var details = [
             { icon: 'bx bx-calendar', label: 'Starts', value: formatDateWithDay(batch.startDate) },
             { icon: 'bx bx-calendar-check', label: 'Ends', value: formatDateWithDay(batch.endDate) },
-            { icon: 'bx bx-calendar-week', label: 'Days', value: batch.days ? 'Every ' + batch.days.join(' & ') : '' },
+            { icon: 'bx bx-calendar-week', label: 'Days', value: batch.days ? (isSingleDay ? batch.days.join(' & ') : 'Every ' + batch.days.join(' & ')) : '' },
             { icon: 'bx bx-time-five', label: 'Time', value: batch.time, note: 'Mauritius time' },
             { icon: 'bx bx-hourglass', label: 'Per session', value: batch.hoursPerDay },
-            { icon: 'bx bx-revision', label: 'Duration', value: batch.numberOfWeeks ? batch.numberOfWeeks + ' week' + (batch.numberOfWeeks > 1 ? 's' : '') : '' },
+            { icon: 'bx bx-revision', label: 'Duration', value: isSingleDay ? '' : (batch.numberOfWeeks ? batch.numberOfWeeks + ' week' + (batch.numberOfWeeks > 1 ? 's' : '') : '') },
             { icon: 'bx bx-layer', label: 'Sessions', value: totalSessions }
         ];
 
@@ -281,7 +283,7 @@ function renderBatches(batches) {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.className = 'button workshop-batch-card__register';
-            link.textContent = 'Register Now';
+            link.textContent = isFree ? 'Register Free' : 'Register Now';
             card.appendChild(link);
         }
 

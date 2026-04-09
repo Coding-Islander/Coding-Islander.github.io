@@ -48,7 +48,7 @@
   "format": {
     "mode": "Online, Live Sessions",
     "language": "Mauritian Creole and English",
-    "batchSize": 15
+    "batchSize": ""
   },
 
   "paid": true,

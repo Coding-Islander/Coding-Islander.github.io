@@ -50,7 +50,7 @@
   "format": {
     "mode": "Online, Live Sessions",
     "language": "Mauritian Creole and English",
-    "batchSize": 15
+    "batchSize": "15 participants (Small group format)"
   },
 
   "paid": true,
