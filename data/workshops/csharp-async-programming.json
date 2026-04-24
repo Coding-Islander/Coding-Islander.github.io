@@ -1,0 +1,91 @@
+{
+  "title": "C# Asynchronous Programming Workshop",
+  "type": "workshop",
+  "heroImage": "/assets/img/workshops/csharp-async-programming.jpg",
+  "youtubeVideoId": "",
+  "headline": "Spoiler: Just Adding the async Keyword to a Method Doesn't Make It Asynchronous",
+  "subheadline": "A live, hands-on workshop where you'll finally understand what async actually does under the hood - and write asynchronous C# code that's correct, predictable and deadlock-free.",
+
+  "painPoints": [
+    "You added the async keyword to your method and assumed it's now asynchronous - but nothing actually changed",
+    "Your app freezes or deadlocks and you can't figure out why - .Result and .Wait() seem fine until they aren't",
+    "You don't really know when to use await vs ContinueWith - or what happens when you have to handle exceptions in async code",
+    "async void, fire-and-forget, swallowed exceptions - your code runs but you're never fully confident it's correct"
+  ],
+
+  "transformation": [
+    "Understand exactly what async/await does behind the scenes - no more cargo-cult coding",
+    "Know when to use async for I/O-bound work vs parallel for CPU-bound work - and never confuse them again",
+    "Handle exceptions, cancellation tokens and continuations like a developer who's actually read the docs",
+    "Write async code that doesn't deadlock, doesn't swallow errors and doesn't surprise you in production"
+  ],
+
+  "whatYouWillDo": [
+    "Break down what the async keyword actually does - and understand what really makes a method asynchronous",
+    "Build your own asynchronous methods from scratch and understand the state machine and performance implications",
+    "Use the Task Parallel Library - chain work with ContinueWith, apply TaskContinuationOptions for success, failure and cancellation paths",
+    "Run multiple tasks in parallel with Task.WhenAll and collect all results cleanly",
+    "Handle exceptions properly - compare exception behaviour with await vs ContinueWith and stop losing stack traces",
+    "Implement CancellationTokens to gracefully cancel long-running operations",
+    "Diagnose and fix real deadlock scenarios caused by .Result and .Wait() - understand why they happen and how to avoid them",
+    "Understand the SynchronizationContext and why ConfigureAwait(false) matters",
+    "Walk through a best practices checklist and performance considerations you can apply to your codebase immediately",
+    "Complete practical exercises with live corrections so you leave knowing - not just believing your code is right"
+  ],
+
+  "prerequisites": "You should be comfortable with Object Oriented Programming in C#. You don't need any prior experience with async/await or the Task Parallel Library - that's exactly what we'll build together.",
+
+  "whyDifferent": [
+    "Every concept is coded live with real examples - not explained on slides you'll forget by next week",
+    "Hands-on exercises after each topic, with live corrections so you understand exactly where and why your code broke",
+    "The sandbox environment stays available after the workshop - keep experimenting with the same examples and exercises",
+    "Recordings stay accessible for a period so you can revisit any explanation at your own pace",
+    "Cheatsheets provided - a practical async/await reference you'll keep reaching for long after the workshop",
+    "Maximum 15 participants so you get real attention, real answers and real feedback - not a seat in a crowd",
+    "Delivered in a mix of Mauritian Creole and English - designed so the concepts actually stick",
+    "A badge to showcase your new skills on LinkedIn and get noticed by employers"
+  ],
+
+  "instructor": {
+    "name": "Mehfooz Kausmally",
+    "credentials": ["Certified C# Developer", "Approved Trainer"],
+    "description": "A seasoned software professional from Mauritius with over a decade of experience in the IT industry. After a successful career as a developer in multinational companies working extensively with C#, .NET and complex backend systems, Mehfooz transitioned into full-time professional coaching. He has already guided over 270 engineers across different technologies and levels - bringing real-world expertise and a practical, hands-on approach into every session."
+  },
+
+  "format": {
+    "mode": "Online, Live Sessions",
+    "language": "Mauritian Creole and English",
+    "batchSize": "15 participants (Small group format)"
+  },
+
+  "paid": true,
+  "price": "Rs 5,500",
+  "promotionPrice": "Rs 3,950",
+
+  "batches": [
+    {
+      "startDate": "2026-05-10",
+      "endDate": "2026-06-17",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday", "Sunday"],
+      "numberOfWeeks": 5,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-csharp-async-batch1",
+      "visible": false,
+      "fullyBooked": false
+    },
+    {
+      "startDate": "2026-08-11",
+      "endDate": "2026-08-20",
+      "time": "20:00 - 22:00",
+      "days": ["Tuesday", "Thursday"],
+      "numberOfWeeks": 2,
+      "hoursPerDay": "2 hours",
+      "registrationLink": "https://forms.office.com/example-csharp-async-batch2",
+      "visible": true,
+      "fullyBooked": false
+    }
+  ],
+
+  "cta": "Book Your Seat"
+}
