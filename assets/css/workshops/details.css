@@ -322,6 +322,7 @@
 .workshop-format__pricing-values {
     display: flex;
     align-items: baseline;
+    flex-wrap: nowrap;
     gap: 0.5rem;
 }
 
@@ -329,12 +330,14 @@
     font-size: var(--normal-font-size);
     color: #999;
     text-decoration: line-through;
+    white-space: nowrap;
 }
 
 .workshop-format__price-current {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
     font-weight: 700;
     color: var(--first-color);
+    white-space: nowrap;
 }
 
 .workshop-format__price-free {
@@ -350,6 +353,12 @@
     font-size: var(--smaller-font-size);
     color: #999;
     margin-top: 0.1rem;
+}
+
+.workshop-format__price-scope {
+    font-size: var(--smaller-font-size);
+    color: #999;
+    white-space: nowrap;
 }
 
 /* ===== BATCHES ===== */

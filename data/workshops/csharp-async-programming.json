@@ -21,7 +21,7 @@
   ],
 
   "whatYouWillDo": [
-    "Break down what the async keyword actually does - and understand what really makes a method asynchronous",
+    "Break down what the await keyword actually does - and understand what really makes a method asynchronous",
     "Build your own asynchronous methods from scratch and understand the state machine and performance implications",
     "Use the Task Parallel Library - chain work with ContinueWith, apply TaskContinuationOptions for success, failure and cancellation paths",
     "Run multiple tasks in parallel with Task.WhenAll and collect all results cleanly",

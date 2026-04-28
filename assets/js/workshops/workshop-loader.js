@@ -187,8 +187,10 @@ function renderPricing(data, typeLabel) {
     if (data.promotionPrice) {
         priceHtml += '<span class="workshop-format__price-old">' + escapeHtml(data.price) + '</span>';
         priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.promotionPrice) + '</span>';
+        priceHtml += '<span class="workshop-format__price-scope">(for the whole ' + escapeHtml(typeLabel.toLowerCase()) + ')</span>';
     } else if (data.price) {
         priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.price) + '</span>';
+        priceHtml += '<span class="workshop-format__price-scope">(for the whole ' + escapeHtml(typeLabel.toLowerCase()) + ')</span>';
     }
     priceHtml += '</div><span class="workshop-format__price-currency">Mauritian Rupees</span></div>';
     pricingRow.innerHTML = priceHtml;
