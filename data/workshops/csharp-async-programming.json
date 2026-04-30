@@ -4,9 +4,11 @@
   "heroImage": "/assets/img/workshops/csharp-async-programming.jpg",
   "youtubeVideoId": "",
   "headline": "Spoiler: Just Adding the async Keyword to a Method Doesn't Make It Asynchronous",
-  "subheadline": "A live, hands-on workshop where you'll finally understand what async actually does under the hood - and write asynchronous C# code that's correct, predictable and deadlock-free.",
+  "subheadline": "Join this live, hands-on workshop where you'll finally understand what async actually does under the hood - and write asynchronous C# code that's correct, predictable and deadlock-free.",
 
   "painPoints": [
+    "You open existing async code and immediately feel lost - you can't follow the flow, don't know what's safe to change, and are scared to touch anything in case you break something",
+    "You use AI to generate async code and it compiles and runs - but you can't explain what it does, can't spot the pitfalls, and wouldn't know how to defend it in a code review. Working doesn't mean correct.",
     "You added the async keyword to your method and assumed it's now asynchronous - but nothing actually changed",
     "Your app freezes or deadlocks and you can't figure out why - .Result and .Wait() seem fine until they aren't",
     "You don't really know when to use await vs ContinueWith - or what happens when you have to handle exceptions in async code",
@@ -14,7 +16,7 @@
   ],
 
   "transformation": [
-    "Understand exactly what async/await does behind the scenes - no more cargo-cult coding",
+    "Understand exactly what async/await does behind the scenes - no more copy-paste-and-pray coding",
     "Know when to use async for I/O-bound work vs parallel for CPU-bound work - and never confuse them again",
     "Handle exceptions, cancellation tokens and continuations like a developer who's actually read the docs",
     "Write async code that doesn't deadlock, doesn't swallow errors and doesn't surprise you in production"
@@ -22,13 +24,13 @@
 
   "whatYouWillDo": [
     "Break down what the await keyword actually does - and understand what really makes a method asynchronous",
-    "Build your own asynchronous methods from scratch and understand the state machine and performance implications",
-    "Use the Task Parallel Library - chain work with ContinueWith, apply TaskContinuationOptions for success, failure and cancellation paths",
+    "Build your own asynchronous methods from scratch and understand performance implications",
+    "Use the Task Parallel Library - chain work with ContinueWith and get an intro to Parallel Programming in .NET so you clearly understand the difference between async and parallel",
     "Run multiple tasks in parallel with Task.WhenAll and collect all results cleanly",
-    "Handle exceptions properly - compare exception behaviour with await vs ContinueWith and stop losing stack traces",
-    "Implement CancellationTokens to gracefully cancel long-running operations",
+    "Handle exceptions properly - compare exception behaviour with await vs ContinueWith and understand how to avoid common pitfalls",
+    "Implement CancellationTokens to gracefully cancel operations",
     "Diagnose and fix real deadlock scenarios caused by .Result and .Wait() - understand why they happen and how to avoid them",
-    "Understand the SynchronizationContext and why ConfigureAwait(false) matters",
+    "Understand the SynchronizationContext and why ConfigureAwait(false) matters in some cases",
     "Walk through a best practices checklist and performance considerations you can apply to your codebase immediately",
     "Complete practical exercises with live corrections so you leave knowing - not just believing your code is right"
   ],
