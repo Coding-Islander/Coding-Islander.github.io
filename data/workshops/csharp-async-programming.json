@@ -1,6 +1,7 @@
 {
-  "title": "C# Asynchronous Programming Workshop",
+  "title": "Asynchronous Programming in .NET/C# Workshop",
   "type": "workshop",
+  "technology": ".NET/C#",
   "heroImage": "/assets/img/workshops/csharp-async-programming.jpg",
   "youtubeVideoId": "",
   "headline": "Spoiler: Just Adding the async Keyword to a Method Doesn't Make It Asynchronous",
@@ -87,7 +88,5 @@
       "visible": true,
       "fullyBooked": false
     }
-  ],
-
-  "cta": "Book Your Seat"
+  ]
 }

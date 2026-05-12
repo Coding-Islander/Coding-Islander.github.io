@@ -37,10 +37,10 @@ function renderWorkshop(data) {
     setText('workshop-title', data.title);
     setOptionalText('workshop-headline', data.headline);
     setOptionalText('workshop-subheadline', data.subheadline);
-    if (data.cta) {
-        setText('hero-cta', data.cta);
-        //setText('mid-cta', data.cta);
-    }
+    
+    // Dynamic CTA based on paid status
+    var ctaText = data.paid === false ? 'Register Free' : 'Book Your Seat';
+    setText('hero-cta', ctaText);
 
     // Optional hero image
     if (data.heroImage) {

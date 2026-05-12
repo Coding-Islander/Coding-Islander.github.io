@@ -1,0 +1,11 @@
+{
+  "workshops": [
+    "sql-joins",
+    "sql-group-by",
+    "sql-exists-operator",
+    "sql-set-operators",
+    "csharp-async-programming",
+    "csharp-dependency-injection",
+    "csharp-oop"
+  ]
+}

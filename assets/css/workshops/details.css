@@ -541,6 +541,59 @@
     color: #555;
 }
 
+/* ===== CONTACT / QUESTIONS SECTION ===== */
+.workshop-contact {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #eef1f5);
+}
+
+.workshop-contact__container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.workshop-contact__title {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    margin-bottom: 0.5rem;
+}
+
+.workshop-contact__text {
+    font-size: var(--normal-font-size);
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.workshop-contact__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.workshop-contact__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--normal-font-size);
+}
+
+.workshop-contact__btn i {
+    font-size: 1.25rem;
+}
+
+.workshop-contact__btn--whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.workshop-contact__btn--whatsapp:hover {
+    background-color: #1fb855;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
 /* ===== BROWSE OTHER WORKSHOPS ===== */
 .workshop-browse {
     text-align: center;

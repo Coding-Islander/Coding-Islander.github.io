@@ -25,13 +25,9 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+                        <li class="nav__item"><a href="workshops/" class="nav__link">Workshops</a></li>
                         <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
-                        <!--
-                            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                            <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        -->
+                        <!-- <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li> -->
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -46,46 +42,69 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Mehfooz</span><br> Technical<br>Trainer and Coach</h1>
+                    <h1 class="home__title">Level Up Your<br><span class="home__title-color">Developer Skills</span></h1>
+                    <p class="home__description">Practical, hands-on workshops in different technologies. Learn from industry experts and build real-world skills.</p>
 
-                    <a href="#contact" class="button">Contact</a>
+                    <div class="home__buttons">
+                        <a href="workshops/" class="button">Browse Workshops</a>
+                        <!-- <a href="#courses" class="button button--outline">View Courses</a> -->
+                    </div>
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/mehfoozkausmally/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.linkedin.com/company/CodingIslander" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin-square'></i></a>
                     <a href="https://www.facebook.com/CodingIslander/" target="_blank" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
-                    <!--
-                        <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                        <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    -->
                 </div>
 
                 <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/profile-pic.png"/>
-                        </g>
-                    </svg>
+                    <div class="home__collage">
+                        <div class="collage__item collage__item--1">
+                            <img src="assets/img/work3.jpg" alt="Developer coding">
+                        </div>
+                        <div class="collage__item collage__item--2">
+                            <img src="assets/img/work1.jpg" alt="Planning and wireframes">
+                        </div>
+                        <div class="collage__item collage__item--3">
+                            <img src="assets/img/work4.jpg" alt="Modern workspace">
+                        </div>
+                        <div class="collage__item collage__item--4">
+                            <img src="assets/img/work5.jpg" alt="Working on computer">
+                        </div>
+                        <div class="collage__item collage__item--5">
+                            <img src="assets/img/work6.jpg" alt="Clean desk setup">
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+            <!--===== WHAT WE OFFER =====-->
+            <section class="services section" id="services">
+                <h2 class="section-title">What We Offer</h2>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about-pic.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I am Mehfooz</h2>
-                        <p class="about__text">A seasoned software professional from the beautiful island of Mauritius, with over a decade of experience in the IT industry. I share my passion for technologies like SQL, .NET/C#, and APIs among others by offering practical, hands-on training - breaking down complex concepts into clear, real-world lessons. I help learners at all levels build their skills and equip them with the knowledge and confidence to build and grow in their career.</p>           
-                    </div>                                   
+                <div class="services__container bd-grid">
+                    <a href="workshops/" class="services__card">
+                        <div class="services__icon">
+                            <i class='bx bx-wrench'></i>
+                        </div>
+                        <h3 class="services__title">Workshops</h3>
+                        <p class="services__description">Intensive hands-on sessions focused on a single topic. Practice on real data with live guidance and walk away with skills you can use immediately.</p>
+                    </a>
+
+                    <!-- <a href="#courses" class="services__card">
+                        <div class="services__icon">
+                            <i class='bx bx-book-open'></i>
+                        </div>
+                        <h3 class="services__title">Courses</h3>
+                        <p class="services__description">Structured multi-week training programs covering comprehensive topics. Build deep expertise with exercises, projects, and expert guidance.</p>
+                    </a> -->
+
+                    <a href="workshops/" class="services__card">
+                        <div class="services__icon">
+                            <i class='bx bx-video'></i>
+                        </div>
+                        <h3 class="services__title">Webinars</h3>
+                        <p class="services__description">Short knowledge-sharing sessions on trending topics. Get clarity on concepts, ask questions live, and spark your curiosity. Some are free - grab your chance!</p>
+                    </a>
                 </div>
             </section>
 
@@ -184,7 +203,7 @@
             -->
 
             <!--===== COURSES =====-->
-            <section class="courses section" id="courses">
+            <!--<section class="courses section" id="courses">
                 <h2 class="section-title">Courses</h2>
                 <div class="courses__container" style="display:flex;flex-direction:column;align-items:center;">
                     <button class="courses__nav-button courses__nav-prev" id="prevBtn">
@@ -208,7 +227,7 @@
                             </div>
                         </a> -->
 
-                        <a href="course-advanced-sql.html" class="courses__item" style="width:100%;max-width:400px;margin:0 auto;">
+            <!--            <a href="course-advanced-sql.html" class="courses__item" style="width:100%;max-width:400px;margin:0 auto;">
                             <span class="courses__badge">MQA Approved</span>
                             <img src="assets/img/work4.jpg" alt="Advanced SQL Course" class="courses__image">
                             <div class="courses__content" style="max-width:370px;width:100%;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,0.07);border-radius:18px;padding:24px;background:#fff;">
@@ -216,7 +235,7 @@
                                 <!-- <p class="courses__description">
                                     Master complex SQL concepts, query optimization, and modern reporting techniques. Featuring AI tools integration for enhanced productivity.
                                 </p> -->
-                                <div class="courses__meta">
+            <!--                    <div class="courses__meta">
                                     <div class="courses__meta-flex">
                                         <div class="courses__meta-item">
                                             <i class='bx bx-time-five'></i>
@@ -242,7 +261,7 @@
                                 </span>
                             </div>
                         </a>
-                        
+            -->                   
                         <!-- More courses will be added here -->
                         <!-- <div class="courses__item">
                             <div class="courses__content coming-soon__content">
@@ -251,12 +270,12 @@
                                 <p class="coming-soon__text">Stay tuned for additional courses!</p>
                             </div>
                         </div> -->
-                    </div>
+            <!--        </div>
                     <button class="courses__nav-button courses__nav-next" id="nextBtn">
                         <i class='bx bx-chevron-right'></i>
                     </button>
                 </div>
-            </section>
+            </section> -->
 
             <!--===== TESTIMONIALS =====-->
             <section class="testimonials section" id="testimonials">
@@ -268,7 +287,7 @@
                         <div class="testimonial__img">
                             <img src="assets/img/testimonials/bhavna.jpg" alt="Bhavna">
                         </div>
-                        <p class="testimonial__quote">Mehfooz is not only highly knowledgeable in SQL but also genuinely passionate about teaching and helping others grow. He has a unique ability to simplify complex concepts and present them in a way that's both clear and relatable.</p>
+                        <p class="testimonial__quote">Trainer is not only highly knowledgeable in SQL but also genuinely passionate about teaching and helping others grow. He has a unique ability to simplify complex concepts and present them in a way that's both clear and relatable.</p>
                         <h3 class="testimonial__name">Bhavna, N.</h3>
                         <p class="testimonial__title">Corporate Data Quality Analyst</p>
                         <p class="testimonial__training">SQL Training</p>
@@ -305,7 +324,7 @@
                 <div class="contact__container bd-grid">
                     <!-- Contact Icons -->
                     <div class="contact__icons">
-                        <a href="mailto:info@codingislander.com" class="contact__icon">
+                        <a href="mailto:contact@codingislander.com" class="contact__icon">
                             <i class='bx bx-envelope'></i>
                             <span class="contact__text">Email</span>
                         </a>
@@ -336,15 +355,10 @@
             <img class="footer__logo" src="assets/img/branding/logo.png" alt="Coding Islander">
             
             <div class="footer__social">
-                <a href="https://www.linkedin.com/in/mehfoozkausmally/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://www.facebook.com/CodingIslander/" target="_blank" class="footer__icon"><i class='bx bxl-facebook-square' ></i></a>
-                <!--
-                    <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                    <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-                -->
+                <a href="https://www.linkedin.com/company/CodingIslander" target="_blank" class="footer__icon"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.facebook.com/CodingIslander" target="_blank" class="footer__icon"><i class='bx bxl-facebook-square' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Coding Islander. All rigths reserved</p>
+            <p class="footer__copy">&#169; Coding Islander. All rights reserved</p>
         </footer>
 
         <!--===== SCROLL TOP =====-->

@@ -1,6 +1,7 @@
 {
   "title": "SQL Set Operators Webinar",
   "type": "webinar",
+  "technology": "SQL",
   "heroImage": "/assets/img/workshops/sql-set-operators.jpg",
   "youtubeVideoId": "",
   "headline": "UNION, INTERSECT, EXCEPT - Finally Understand When to Use Which",
@@ -67,7 +68,5 @@
       "visible": true,
       "fullyBooked": false
     }
-  ],
-
-  "cta": "Register Free"
+  ]
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/workshops/list.css">
+    <link rel="icon" type="image/png" href="../assets/img/branding/favicon.png">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Workshops | Coding Islander</title>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="../index.html" class="nav__logo">
+                    <img src="../assets/img/branding/logo.png" alt="Coding Islander">
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="./" class="nav__link  active-link">Workshops</a></li>
+                    <li class="nav__item"><a href="../index.html#testimonials" class="nav__link">Testimonials</a></li>
+                    <!-- <li class="nav__item"><a href="../index.html#courses" class="nav__link">Courses</a></li> -->
+                    <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== WORKSHOPS HERO =====-->
+        <section class="workshops-hero section">
+            <div class="workshops-hero__container bd-grid">
+                <h1 class="workshops-hero__title">Workshops</h1>
+                <p class="workshops-hero__subtitle">Workshops and Webinars to level up your skills.</p>
+                
+                <div class="workshops-hero__types">
+                    <div class="workshops-hero__type">
+                        <i class='bx bx-wrench'></i>
+                        <h3>Workshops</h3>
+                        <p>Hands-on sessions where you write code, practice on real data and scenarios, and build skills you can use immediately.</p>
+                    </div>
+                    <div class="workshops-hero__type">
+                        <i class='bx bx-video'></i>
+                        <h3>Webinars</h3>
+                        <p>Short knowlege-sharing sessions on trending topics and concepts. Gain clarity on confusing topics, and ask questions live. Some are free - grab your chance!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== FILTER =====-->
+        <section class="workshops-filter section">
+            <div class="workshops-filter__container bd-grid">
+                <div class="filter-group">
+                    <label class="filter-label">Technology:</label>
+                    <div class="filter-buttons" id="tech-filter">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="sql">SQL</button>
+                        <button class="filter-btn" data-filter=".net/c#">.NET/C#</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Type:</label>
+                    <div class="filter-buttons" id="type-filter">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="workshop">Workshops</button>
+                        <button class="filter-btn" data-filter="webinar">Webinars</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORKSHOPS GRID =====-->
+        <section class="workshops-list section">
+            <div class="workshops-list__container bd-grid">
+                <div class="workshops-grid" id="workshops-grid">
+                    <!-- Workshop cards will be dynamically inserted here -->
+                    <div class="workshops-loading">
+                        <i class='bx bx-loader-alt bx-spin'></i>
+                        <p>Loading workshops...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <img class="footer__logo" src="../assets/img/branding/logo.png" alt="Coding Islander">
+        
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/company/CodingIslander" target="_blank" class="footer__icon"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.facebook.com/CodingIslander" target="_blank" class="footer__icon"><i class='bx bxl-facebook-square' ></i></a>
+        </div>
+        <p class="footer__copy">&#169; 2026 Coding Islander. All rights reserved</p>
+    </footer>
+
+    <!--===== SCROLL TOP =====-->
+    <a href="#" class="back-to-top" id="scroll-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="../assets/js/main.js"></script>
+    
+    <!--===== WORKSHOPS LIST JS =====-->
+    <script src="../assets/js/workshops/workshops-list.js"></script>
+</body>
+</html>

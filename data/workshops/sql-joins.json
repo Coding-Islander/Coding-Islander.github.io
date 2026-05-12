@@ -1,6 +1,7 @@
 {
   "title": "SQL JOINS Workshop",
   "type": "workshop",
+  "technology": "SQL",
   "heroImage": "/assets/img/workshops/sql-joins.jpg",
   "youtubeVideoId": "",
   "headline": "Stop Guessing Which JOIN to Use - Start Knowing",
@@ -91,7 +92,5 @@
       "visible": false,
       "fullyBooked": true
     }
-  ],
-
-  "cta": "Book Your Seat"
+  ]
 }

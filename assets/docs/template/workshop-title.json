@@ -1,6 +1,7 @@
 {
   "title": "",
   "type": "",
+  "technology": "",
   "heroImage": "",
   "youtubeVideoId": "",
   "headline": "",
@@ -78,7 +79,5 @@
       "visible": true,
       "fullyBooked": false
     }
-  ],
-
-  "cta": "Book Your Seat"
+  ]
 }
