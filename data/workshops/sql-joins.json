@@ -57,7 +57,7 @@
   "paid": true,
   "price": "Rs 3,500",
   "promotionPrice": "Rs 2,500",
-
+  "waitingListLink": "",
   "batches": [
     {
       "startDate": "2026-05-10",
@@ -78,7 +78,7 @@
       "numberOfWeeks": 2,
       "hoursPerDay": "2 hours",
       "registrationLink": "https://forms.office.com/example-sql-joins-batch1",
-      "visible": true,
+      "visible": false,
       "fullyBooked": false
     },
     {

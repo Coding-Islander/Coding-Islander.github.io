@@ -124,6 +124,39 @@
     color: #fff;
 }
 
+/* Type filter — subtle color cues matching card accents */
+#type-filter [data-filter="workshop"] {
+    border-color: var(--third-color);
+    color: #8a6400;
+}
+
+#type-filter [data-filter="workshop"]:hover {
+    background: var(--third-color);
+    color: #5a3f00;
+}
+
+#type-filter [data-filter="workshop"].active {
+    background: var(--third-color);
+    color: #5a3f00;
+    border-color: var(--third-color);
+}
+
+#type-filter [data-filter="webinar"] {
+    border-color: var(--second-color);
+    color: var(--second-color);
+}
+
+#type-filter [data-filter="webinar"]:hover {
+    background: var(--second-color);
+    color: #fff;
+}
+
+#type-filter [data-filter="webinar"].active {
+    background: var(--second-color);
+    color: #fff;
+    border-color: var(--second-color);
+}
+
 /* ===== WORKSHOPS GRID ===== */
 .workshops-list {
     padding: 3rem 1rem;
@@ -187,6 +220,14 @@
     box-shadow: 0 12px 40px rgba(84, 111, 202, 0.25);
 }
 
+.workshop-card[data-type="workshop"] {
+    border-top: 4px solid var(--third-color);
+}
+
+.workshop-card[data-type="webinar"] {
+    border-top: 4px solid var(--second-color);
+}
+
 .workshop-card__image {
     width: 100%;
     height: 180px;
@@ -237,8 +278,8 @@
 }
 
 .workshop-card__badge--webinar {
-    background: var(--third-color);
-    color: black;
+    background: var(--second-color);
+    color: #fff;
 }
 
 .workshop-card__badge--free {

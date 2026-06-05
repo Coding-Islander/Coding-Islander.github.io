@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const techLabel = workshop.technology || 'Other';
         const isWebinar = workshop.type === 'webinar';
         const isFree = !workshop.paid;
+        const placeholderIcon = isWebinar ? 'bx-video' : 'bx-code-alt';
         
         // Determine price display
         let priceHtml = '';
@@ -88,9 +89,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Image or placeholder
         let imageHtml = '';
         if (workshop.heroImage) {
-            imageHtml = `<img src="..${workshop.heroImage}" alt="${workshop.title}" class="workshop-card__image" onerror="this.outerHTML='<div class=\\'workshop-card__image-placeholder\\'><i class=\\'bx bx-code-alt\\'></i></div>'">`;
+            imageHtml = `<img src="..${workshop.heroImage}" alt="${workshop.title}" class="workshop-card__image" onerror="this.outerHTML='<div class=\\'workshop-card__image-placeholder\\'><i class=\\'bx ${placeholderIcon}\\'></i></div>'">`;
         } else {
-            imageHtml = `<div class="workshop-card__image-placeholder"><i class='bx bx-code-alt'></i></div>`;
+            imageHtml = `<div class="workshop-card__image-placeholder"><i class='bx ${placeholderIcon}'></i></div>`;
         }
 
         return `

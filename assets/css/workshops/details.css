@@ -516,10 +516,13 @@
     color: #555;
 }
 
-.workshop-batches__contact-link {
-    color: var(--first-color);
-    font-weight: var(--font-semi);
-    text-decoration: underline;
+.workshop-batches__none p {
+    margin-bottom: 1.5rem;
+}
+
+.workshop-batches__waitlist-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 /* CTA message inside batches section */

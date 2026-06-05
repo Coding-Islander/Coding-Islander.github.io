@@ -55,7 +55,7 @@
   "paid": false,
   "price": "",
   "promotionPrice": "",
-
+  "waitingListLink": "",
   "batches": [
     {
       "startDate": "2026-06-09",
@@ -65,7 +65,7 @@
       "numberOfWeeks": 1,
       "hoursPerDay": "1.5 hours",
       "registrationLink": "https://forms.office.com/example-sql-set-operators",
-      "visible": true,
+      "visible": false,
       "fullyBooked": false
     }
   ]

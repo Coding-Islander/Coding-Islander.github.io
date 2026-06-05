@@ -49,7 +49,7 @@ function renderWorkshop(data) {
         var heroImg = document.getElementById('hero-image-img');
         if (heroContainer && heroImgWrap && heroImg) {
             heroContainer.classList.add('workshop-hero--has-image');
-            heroImg.src = data.heroImage;
+            heroImg.src = resolveWorkshopAssetUrl(data.heroImage);
             heroImg.alt = data.title || '';
             heroImgWrap.style.display = 'block';
         }
@@ -123,7 +123,7 @@ function renderWorkshop(data) {
     renderPricing(data, typeLabel);
 
     // 10. Batches
-    renderBatches(data.batches, data.paid === false);
+    renderBatches(data.batches, data.paid === false, data.waitingListLink);
 }
 
 /* ---- Helpers ---- */
@@ -135,6 +135,13 @@ function extractYouTubeId(input) {
     // Full or short YouTube URL
     var match = input.match(/(?:youtube\.com\/(?:watch\?.*v=|embed\/|v\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
     return match ? match[1] : null;
+}
+
+function resolveWorkshopAssetUrl(path) {
+    if (!path) return '';
+    if (/^(?:[a-z]+:)?\/\//i.test(path) || path.indexOf('data:') === 0) return path;
+    if (path.charAt(0) === '/') return '..' + path;
+    return path;
 }
 
 function setText(id, text) {
@@ -197,7 +204,7 @@ function renderPricing(data, typeLabel) {
     formatGrid.appendChild(pricingRow);
 }
 
-function renderBatches(batches, isFree) {
+function renderBatches(batches, isFree, waitingListLink) {
     var container = document.getElementById('batches-content');
     if (!container) return;
     container.innerHTML = '';
@@ -207,18 +214,17 @@ function renderBatches(batches, isFree) {
         return b.visible !== false;
     });
 
+    var hasAvailable = visibleBatches.some(function (b) { return !b.fullyBooked; });
+
+    // No visible batches at all: show message + waiting list, no cards
     if (visibleBatches.length === 0) {
-        var msg = document.createElement('div');
-        msg.className = 'workshop-batches__none';
-        msg.innerHTML = '<p>No upcoming batches are currently scheduled.</p>' +
-            '<p>Interested? <a href="../index.html#contact" class="workshop-batches__contact-link">Get in touch</a> to request one.</p>';
-        container.appendChild(msg);
+        container.appendChild(buildWaitingListBlock(waitingListLink, false));
         return;
     }
 
-    // Show CTA message only when visible batches exist
+    // Show CTA message only when there are available (not fully booked) batches
     var batchesCta = document.getElementById('batches-cta');
-    if (batchesCta) batchesCta.style.display = '';
+    if (batchesCta) batchesCta.style.display = hasAvailable ? '' : 'none';
 
     visibleBatches.forEach(function (batch) {
         var card = document.createElement('div');
@@ -291,6 +297,36 @@ function renderBatches(batches, isFree) {
 
         container.appendChild(card);
     });
+
+    // All visible batches are fully booked: show waiting list block after the cards
+    if (!hasAvailable) {
+        container.appendChild(buildWaitingListBlock(waitingListLink, true));
+    }
+}
+
+function buildWaitingListBlock(waitingListLink, allFullyBooked) {
+    var msg = document.createElement('div');
+    msg.className = 'workshop-batches__none';
+
+    var p = document.createElement('p');
+    p.textContent = allFullyBooked
+        ? 'All current batches are fully booked.'
+        : 'No upcoming batches are currently scheduled.';
+    msg.appendChild(p);
+
+    var btn = document.createElement('a');
+    btn.className = 'button workshop-batches__waitlist-btn';
+    btn.textContent = 'Join the Waiting List';
+    if (waitingListLink) {
+        btn.href = waitingListLink;
+        btn.target = '_blank';
+        btn.rel = 'noopener noreferrer';
+    } else {
+        btn.href = '../index.html#contact';
+    }
+    msg.appendChild(btn);
+
+    return msg;
 }
 
 function formatDate(dateStr) {
