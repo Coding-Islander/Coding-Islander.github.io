@@ -319,6 +319,20 @@
     margin-bottom: 0.15rem;
 }
 
+.workshop-format__pricing-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+.workshop-format__price-label {
+    font-size: var(--smaller-font-size);
+    color: #666;
+    min-width: 7rem;
+    font-weight: var(--font-semi);
+}
+
 .workshop-format__pricing-values {
     display: flex;
     align-items: baseline;
@@ -349,16 +363,11 @@
     font-weight: var(--font-semi);
 }
 
-.workshop-format__price-currency {
-    font-size: var(--smaller-font-size);
-    color: #999;
-    margin-top: 0.1rem;
-}
-
 .workshop-format__price-scope {
     font-size: var(--smaller-font-size);
     color: #999;
     white-space: nowrap;
+    margin-top: 0.25rem;
 }
 
 /* ===== BATCHES ===== */

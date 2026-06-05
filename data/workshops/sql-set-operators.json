@@ -36,7 +36,7 @@
     "The difference between INTERSECT and JOINs is tackled head-on - no more silent confusion",
     "Recordings remain available for a period so you can revisit any explanation at your own pace",
     "Cheatsheets provided - a quick-reference guide you'll keep coming back to",
-    "Delivered in a mix of Mauritian Creole and English - designed so the concepts actually stick",
+    "Designed so the concepts actually stick",
     "Live Q&A included so your specific questions get answered on the spot"
   ],
 
@@ -48,13 +48,15 @@
 
   "format": {
     "mode": "Online, Live Webinar",
-    "language": "Mauritian Creole and English",
+    "language": "English",
     "batchSize": "Open"
   },
 
   "paid": false,
   "price": "",
   "promotionPrice": "",
+  "usdPrice": "",
+  "usdPromotionPrice": "",
   "waitingListLink": "",
   "batches": [
     {

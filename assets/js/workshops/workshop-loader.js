@@ -190,16 +190,37 @@ function renderPricing(data, typeLabel) {
         return;
     }
 
-    var priceHtml = '<i class="bx bx-purchase-tag"></i><div><strong>Investment</strong><div class="workshop-format__pricing-values">';
-    if (data.promotionPrice) {
-        priceHtml += '<span class="workshop-format__price-old">' + escapeHtml(data.price) + '</span>';
-        priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.promotionPrice) + '</span>';
-        priceHtml += '<span class="workshop-format__price-scope">(for the whole ' + escapeHtml(typeLabel.toLowerCase()) + ')</span>';
-    } else if (data.price) {
-        priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.price) + '</span>';
+    var priceHtml = '<i class="bx bx-purchase-tag"></i><div><strong>Investment</strong>';
+    // Scope note
+    if (data.price || data.usdPrice) {
         priceHtml += '<span class="workshop-format__price-scope">(for the whole ' + escapeHtml(typeLabel.toLowerCase()) + ')</span>';
     }
-    priceHtml += '</div><span class="workshop-format__price-currency">Mauritian Rupees</span></div>';
+
+    // Mauritius pricing
+    if (data.price) {
+        priceHtml += '<div class="workshop-format__pricing-row"><span class="workshop-format__price-label">Mauritius (MUR)</span><div class="workshop-format__pricing-values">';
+        if (data.promotionPrice) {
+            priceHtml += '<span class="workshop-format__price-old">' + escapeHtml(data.price) + '</span>';
+            priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.promotionPrice) + '</span>';
+        } else {
+            priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.price) + '</span>';
+        }
+        priceHtml += '</div></div>';
+    }
+
+    // International (USD) pricing
+    if (data.usdPrice) {
+        priceHtml += '<div class="workshop-format__pricing-row"><span class="workshop-format__price-label">International (USD)</span><div class="workshop-format__pricing-values">';
+        if (data.usdPromotionPrice) {
+            priceHtml += '<span class="workshop-format__price-old">' + escapeHtml(data.usdPrice) + '</span>';
+            priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.usdPromotionPrice) + '</span>';
+        } else {
+            priceHtml += '<span class="workshop-format__price-current">' + escapeHtml(data.usdPrice) + '</span>';
+        }
+        priceHtml += '</div></div>';
+    }
+
+    priceHtml += '</div>';
     pricingRow.innerHTML = priceHtml;
     formatGrid.appendChild(pricingRow);
 }

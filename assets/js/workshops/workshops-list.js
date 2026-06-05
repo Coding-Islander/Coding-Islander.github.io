@@ -75,15 +75,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         let priceHtml = '';
         if (isFree) {
             priceHtml = '<span class="workshop-card__price workshop-card__price--free">Free</span>';
-        } else if (workshop.promotionPrice) {
-            priceHtml = `
-                <span class="workshop-card__price workshop-card__price--promo">
-                    <span class="workshop-card__price-original">${workshop.price}</span>
-                    ${workshop.promotionPrice}
-                </span>
-            `;
-        } else if (workshop.price) {
-            priceHtml = `<span class="workshop-card__price">${workshop.price}</span>`;
+        } else {
+            // Mauritius pricing
+            let localPriceHtml = '';
+            if (workshop.promotionPrice) {
+                localPriceHtml = `<span class="workshop-card__price-original">${workshop.price}</span>${workshop.promotionPrice}`;
+            } else if (workshop.price) {
+                localPriceHtml = workshop.price;
+            }
+            
+            // International (USD) pricing
+            let usdPriceHtml = '';
+            if (workshop.usdPromotionPrice) {
+                usdPriceHtml = `<span class="workshop-card__price-original">${workshop.usdPrice}</span>${workshop.usdPromotionPrice}`;
+            } else if (workshop.usdPrice) {
+                usdPriceHtml = workshop.usdPrice;
+            }
+            
+            // Build combined price display
+            if (localPriceHtml && usdPriceHtml) {
+                priceHtml = `
+                    <span class="workshop-card__price workshop-card__price--dual">
+                        <span class="workshop-card__price-row">${localPriceHtml}</span>
+                        <span class="workshop-card__price-row workshop-card__price-row--usd">${usdPriceHtml}</span>
+                    </span>
+                `;
+            } else if (localPriceHtml) {
+                priceHtml = `<span class="workshop-card__price${workshop.promotionPrice ? ' workshop-card__price--promo' : ''}">${localPriceHtml}</span>`;
+            } else if (usdPriceHtml) {
+                priceHtml = `<span class="workshop-card__price${workshop.usdPromotionPrice ? ' workshop-card__price--promo' : ''}">${usdPriceHtml}</span>`;
+            }
         }
 
         // Image or placeholder

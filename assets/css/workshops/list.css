@@ -330,6 +330,24 @@
     flex-direction: column;
 }
 
+.workshop-card__price--dual {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.workshop-card__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    font-size: var(--smaller-font-size);
+}
+
+.workshop-card__price-row--usd {
+    color: #666;
+    font-weight: normal;
+}
+
 .workshop-card__price-original {
     text-decoration: line-through;
     color: #999;

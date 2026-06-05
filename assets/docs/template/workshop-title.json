@@ -48,14 +48,16 @@
 
   "format": {
     "mode": "Online, Live Sessions",
-    "language": "Mauritian Creole and English",
+    "language": "English",
     "batchSize": ""
   },
 
   "paid": true,
   "price": "",
   "promotionPrice": "",
-
+  "usdPrice": "",
+  "usdPromotionPrice": "",
+  "waitingListLink": "",
   "batches": [
     {
       "startDate": "2026-05-10",

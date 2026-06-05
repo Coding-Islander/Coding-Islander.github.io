@@ -45,7 +45,7 @@
     "Recordings stay accessible for a period so you can revisit any explanation at your own pace",
     "Cheatsheets provided - a practical async/await reference you'll keep reaching for long after the workshop",
     "Maximum 15 participants so you get real attention, real answers and real feedback - not a seat in a crowd",
-    "Delivered in a mix of Mauritian Creole and English - designed so the concepts actually stick",
+    "Designed so the concepts actually stick",
     "A badge to showcase your new skills on LinkedIn and get noticed by employers"
   ],
 
@@ -57,13 +57,15 @@
 
   "format": {
     "mode": "Online, Live Sessions",
-    "language": "Mauritian Creole and English",
+    "language": "English",
     "batchSize": "15 participants (Small group format)"
   },
 
   "paid": true,
   "price": "Rs 5,500",
   "promotionPrice": "Rs 3,950",
+  "usdPrice": "$50",
+  "usdPromotionPrice": "$35",
   "waitingListLink": "",
   "batches": [
     {
