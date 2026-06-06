@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 priceHtml = `
                     <span class="workshop-card__price workshop-card__price--dual">
                         <span class="workshop-card__price-row">${localPriceHtml}</span>
-                        <span class="workshop-card__price-row workshop-card__price-row--usd">${usdPriceHtml}</span>
+                        <span class="workshop-card__price-row">${usdPriceHtml}</span>
                     </span>
                 `;
             } else if (localPriceHtml) {

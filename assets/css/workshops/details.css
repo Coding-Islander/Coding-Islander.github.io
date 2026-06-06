@@ -348,7 +348,7 @@
 }
 
 .workshop-format__price-current {
-    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
     font-weight: 700;
     color: var(--first-color);
     white-space: nowrap;
@@ -358,7 +358,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
     color: #2ecc71;
     font-weight: var(--font-semi);
 }
