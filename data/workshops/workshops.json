@@ -1,7 +1,6 @@
 {
   "workshops": [
     "sql-joins",
-    "sql-group-by-grouping-sets",
     "sql-set-operators",
     "csharp-async-programming",
     "csharp-oop",
