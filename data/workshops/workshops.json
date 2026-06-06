@@ -1,11 +1,10 @@
 {
   "workshops": [
     "sql-joins",
-    "sql-group-by",
-    "sql-exists-operator",
+    "sql-group-by-grouping-sets",
     "sql-set-operators",
     "csharp-async-programming",
-    "csharp-dependency-injection",
-    "csharp-oop"
+    "csharp-oop",
+    "demistifying-dotnet-ecosystem"
   ]
 }
