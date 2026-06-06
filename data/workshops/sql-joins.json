@@ -57,8 +57,8 @@
   "paid": true,
   "price": "Rs 3,500",
   "promotionPrice": "Rs 2,500",
-  "usdPrice": "$35",
-  "usdPromotionPrice": "$25",
+  "usdPrice": "$75",
+  "usdPromotionPrice": "$55",
   "waitingListLink": "https://forms.office.com/r/R6tnSUyLEh",
   "batches": [
     {
