@@ -440,6 +440,29 @@
     font-weight: normal;
 }
 
+/* Local timezone time row */
+.workshop-batch-card__row--local-time {
+    background: linear-gradient(90deg, rgba(84, 111, 202, 0.08) 0%, transparent 100%);
+    padding: 0.4rem 0.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 0.3rem;
+}
+
+.workshop-batch-card__row--local-time i {
+    color: var(--second-color);
+}
+
+.workshop-batch-card__day-indicator {
+    font-size: 0.65rem;
+    color: #fff;
+    background: var(--second-color);
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    margin-left: 0.3rem;
+    font-weight: var(--font-semi);
+}
+
 .workshop-batch-card__register {
     display: inline-block;
     margin-top: 1.25rem;

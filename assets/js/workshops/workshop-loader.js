@@ -281,6 +281,14 @@ function renderBatches(batches, isFree, waitingListLink) {
         var detailsWrap = document.createElement('div');
         detailsWrap.className = 'workshop-batch-card__details';
 
+        // Get user timezone info for time conversion
+        var userTz = getUserTimezone();
+        var showLocalTime = userTz && !isMauritiusTimezone(userTz);
+        var localTimeInfo = null;
+        if (showLocalTime && batch.time && batch.startDate) {
+            localTimeInfo = convertMauritiusTimeToLocal(batch.time, batch.startDate);
+        }
+
         details.forEach(function (d) {
             if (!d.value) return;
             var row = document.createElement('div');
@@ -288,6 +296,15 @@ function renderBatches(batches, isFree, waitingListLink) {
             var noteHtml = d.note ? ' <small class="workshop-batch-card__row-note">' + escapeHtml(d.note) + '</small>' : '';
             row.innerHTML = '<i class="' + escapeAttr(d.icon) + '"></i><strong>' + escapeHtml(d.label) + ':</strong> <span>' + escapeHtml(d.value) + noteHtml + '</span>';
             detailsWrap.appendChild(row);
+
+            // Add local time row after Mauritius time
+            if (d.label === 'Time' && showLocalTime && localTimeInfo) {
+                var localRow = document.createElement('div');
+                localRow.className = 'workshop-batch-card__row workshop-batch-card__row--local-time';
+                var dayIndicator = localTimeInfo.crossesMidnight ? ' <small class="workshop-batch-card__day-indicator">+1 day</small>' : '';
+                localRow.innerHTML = '<i class="bx bx-globe"></i><strong>Your time:</strong> <span>' + escapeHtml(localTimeInfo.timeRange) + dayIndicator + ' <small class="workshop-batch-card__row-note">' + escapeHtml(getTimezoneDisplayName(userTz)) + '</small></span>';
+                detailsWrap.appendChild(localRow);
+            }
         });
 
         body.appendChild(detailsWrap);
@@ -447,6 +464,73 @@ function renderMiniCalendar(sessionDates) {
     });
 
     return wrapper;
+}
+
+/* ---- Timezone Conversion ---- */
+
+var MAURITIUS_OFFSET_HOURS = 4; // UTC+4, no DST
+
+function getUserTimezone() {
+    try {
+        return Intl.DateTimeFormat().resolvedOptions().timeZone;
+    } catch (e) {
+        return null;
+    }
+}
+
+function getTimezoneDisplayName(tz) {
+    if (!tz) return '';
+    // Extract city from IANA timezone (e.g., "Europe/London" → "London")
+    var parts = tz.split('/');
+    var city = parts[parts.length - 1].replace(/_/g, ' ');
+    return city;
+}
+
+function convertMauritiusTimeToLocal(timeRange, referenceDate) {
+    if (!timeRange || !referenceDate) return null;
+    
+    // Parse "HH:MM - HH:MM" format
+    var match = timeRange.match(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/);
+    if (!match) return null;
+    
+    var startHour = parseInt(match[1], 10);
+    var startMin = parseInt(match[2], 10);
+    var endHour = parseInt(match[3], 10);
+    var endMin = parseInt(match[4], 10);
+    
+    // Create Date objects in UTC based on Mauritius time
+    // Mauritius is UTC+4, so subtract 4 hours to get UTC
+    var refDate = new Date(referenceDate + 'T00:00:00Z');
+    
+    var startUTC = new Date(refDate);
+    startUTC.setUTCHours(startHour - MAURITIUS_OFFSET_HOURS, startMin, 0, 0);
+    
+    var endUTC = new Date(refDate);
+    endUTC.setUTCHours(endHour - MAURITIUS_OFFSET_HOURS, endMin, 0, 0);
+    
+    // Handle case where end time is before start (crosses midnight in Mauritius)
+    if (endUTC <= startUTC) {
+        endUTC.setUTCDate(endUTC.getUTCDate() + 1);
+    }
+    
+    // Format in user's local timezone
+    var timeFormat = { hour: '2-digit', minute: '2-digit', hour12: false };
+    var localStart = startUTC.toLocaleTimeString('en-GB', timeFormat);
+    var localEnd = endUTC.toLocaleTimeString('en-GB', timeFormat);
+    
+    // Check if session crosses midnight in local time
+    var startDay = startUTC.toLocaleDateString('en-GB');
+    var endDay = endUTC.toLocaleDateString('en-GB');
+    var crossesMidnight = startDay !== endDay;
+    
+    return {
+        timeRange: localStart + ' - ' + localEnd,
+        crossesMidnight: crossesMidnight
+    };
+}
+
+function isMauritiusTimezone(tz) {
+    return tz === 'Indian/Mauritius' || tz === 'Africa/Mauritius';
 }
 
 function escapeHtml(str) {
