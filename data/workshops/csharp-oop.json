@@ -1,0 +1,91 @@
+{
+  "title": "Object Oriented Programming in C# Workshop",
+  "type": "workshop",
+  "technology": "C#",
+  "heroImage": "/assets/img/workshops/csharp-oop.jpg",
+  "youtubeVideoId": "",
+  "headline": "Finally Understand Encapsulation, Inheritance, Polymorphism and Abstraction - and Actually Use Them",
+  "subheadline": "A live, hands-on workshop where you'll master the four pillars of OOP in C# - from classes and constructors to interfaces, polymorphism and real-world design decisions.",
+
+  "painPoints": [
+    "You can write C# that compiles, but your classes are just bags of data with no real structure",
+    "Inheritance, interfaces, abstract classes - you've read about them but can't decide when to use which",
+    "Your code works today but becomes a nightmare to extend or maintain next month",
+    "You see UML diagrams and design patterns in documentation but can't translate them into working C# code"
+  ],
+
+  "transformation": [
+    "Design classes that are clean, intentional and easy to extend - not accidental blobs of logic",
+    "Choose confidently between inheritance, interfaces and abstract classes for any real scenario",
+    "Apply all four OOP pillars - encapsulation, inheritance, polymorphism and abstraction - with clarity",
+    "Read a UML diagram and translate it into well-structured C# code without hesitation",
+    "Write code that other developers can understand, maintain and build upon"
+  ],
+
+  "whatYouWillDo": [
+    "Build classes from scratch - constructors, access modifiers, properties, static members - and understand exactly why each exists",
+    "Implement inheritance hierarchies, method overriding and sealed classes on real-world scenarios",
+    "Design and implement interfaces, including advanced patterns like multiple interface implementation",
+    "Compare abstract classes vs interfaces through practical use cases so you always know which to reach for",
+    "Explore both static and dynamic polymorphism with hands-on examples that make the difference click",
+    "Work through value types vs reference types, troubleshooting common class-related bugs and error handling",
+    "Apply naming conventions, code structure best practices",
+    "Complete practical exercises with live corrections - so you walk away having actually built something, not just watched"
+  ],
+
+  "prerequisites": "You should be comfortable with basic C# syntax - variables, methods, loops and conditionals. You don't need prior OOP experience - that's exactly what we'll build together.",
+
+  "whyDifferent": [
+    "Every concept is coded live in C# - not explained on slides you'll forget by Monday",
+    "Hands-on exercises after each topic with live corrections so you understand exactly where your thinking went wrong",
+    "The sandbox environment stays available after the workshop - keep practising and experimenting on your own",
+    "Recordings stay accessible for a period so you can revisit any explanation at your own pace",
+    "Cheatsheets provided - a practical OOP reference you'll keep reaching for long after the last session",
+    "Small batch size so you get real attention, real answers and real feedback - not a seat in a crowd",
+    "Designed around real developer problems - you'll solve the exact challenges that trip people up in production codebases",
+    "A badge to showcase your new skills on LinkedIn and get noticed by employers"
+  ],
+
+  "instructor": {
+    "name": "Mehfooz Kausmally",
+    "credentials": ["Certified .NET Developer", "Approved Trainer"],
+    "description": "A seasoned software professional from Mauritius with over a decade of experience in the IT industry. After a successful career as a developer in multinational companies working extensively with C#, .NET and complex backend systems, Mehfooz transitioned into full-time professional coaching. He has already guided over 270 engineers across different technologies and levels - bringing real-world expertise and a practical, hands-on approach into every session."
+  },
+
+  "format": {
+    "mode": "Online, Live Sessions",
+    "language": "English",
+    "batchSize": "15 participants (Small group format)"
+  },
+
+  "paid": true,
+  "price": "Rs 4,800",
+  "promotionPrice": "Rs 3,499",
+  "usdPrice": "$112",
+  "usdPromotionPrice": "$79",
+  "waitingListLink": "https://forms.office.com/r/KPeERctSrw",
+  "batches": [
+    {
+      "startDate": "2026-07-05",
+      "endDate": "2026-08-09",
+      "time": "09:00 - 12:00",
+      "days": ["Saturday"],
+      "numberOfWeeks": 6,
+      "hoursPerDay": "3 hours",
+      "registrationLink": "https://forms.office.com/example-csharp-oop-batch1",
+      "visible": false,
+      "fullyBooked": false
+    },
+    {
+      "startDate": "2026-08-18",
+      "endDate": "2026-09-10",
+      "time": "20:00 - 22:00",
+      "days": ["Tuesday", "Thursday"],
+      "numberOfWeeks": 4,
+      "hoursPerDay": "2 hours",
+      "registrationLink": "https://forms.office.com/example-csharp-oop-batch2",
+      "visible": false,
+      "fullyBooked": false
+    }
+  ]
+}

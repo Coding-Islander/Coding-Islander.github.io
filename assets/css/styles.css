@@ -900,6 +900,11 @@ img {
     line-height: 1.7;
 }
 
+.services__cta {
+    text-align: center;
+    margin-top: 2.0rem;
+}
+
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--black-color);
