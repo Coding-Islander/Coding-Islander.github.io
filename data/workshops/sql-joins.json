@@ -57,8 +57,8 @@
   "paid": true,
   "price": "Rs 3,500",
   "promotionPrice": "Rs 2,500",
-  "usdPrice": "$75",
-  "usdPromotionPrice": "$55",
+  "usdPrice": "$82",
+  "usdPromotionPrice": "$59",
   "waitingListLink": "https://forms.office.com/r/R6tnSUyLEh",
   "batches": [
     {
@@ -79,7 +79,7 @@
       "days": ["Tuesday", "Thursday"],
       "numberOfWeeks": 2,
       "hoursPerDay": "2 hours",
-      "registrationLink": "https://forms.office.com/example-sql-joins-batch1",
+      "registrationLink": "https://forms.office.com/example-sql-joins-batch2",
       "visible": false,
       "fullyBooked": false
     },
