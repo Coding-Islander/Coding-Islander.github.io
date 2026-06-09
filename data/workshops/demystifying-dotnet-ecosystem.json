@@ -1,7 +1,7 @@
 {
   "title": "Demystifying the .NET Ecosystem Webinar",
   "type": "webinar",
-  "technology": ".NET",
+  "technology": ".NET/C#",
   "heroImage": "/assets/img/workshops/demystifying-dotnet-ecosystem.jpg",
   "youtubeVideoId": "",
   "headline": ".NET Framework, .NET Core, .NET and C# versions, SDKs, Visual Studio versions - Finally Make Sense of the Whole Ecosystem",
