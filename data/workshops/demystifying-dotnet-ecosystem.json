@@ -1,0 +1,74 @@
+{
+  "title": "Demystifying the .NET Ecosystem Webinar",
+  "type": "webinar",
+  "technology": ".NET",
+  "heroImage": "/assets/img/workshops/demystifying-dotnet-ecosystem.jpg",
+  "youtubeVideoId": "",
+  "headline": ".NET Framework, .NET Core, .NET and C# versions, SDKs, Visual Studio versions - Finally Make Sense of the Whole Ecosystem",
+  "subheadline": "A free live session where the entire .NET ecosystem is explained with clear visuals and real examples - so the versions, runtimes and frameworks finally click into place.",
+
+  "painPoints": [
+    "You keep seeing .NET Framework, .NET Core and just \".NET\" everywhere and you're never quite sure which is which",
+    "Is C# and .NET the same thing? And how do Visual Studio versions, .NET SDKs and runtime versions all fit together? It's a mess in your head",
+    "You're not sure whether to start a new project on .NET Framework or modern .NET (and which version to use) - and the decision keeps haunting you",
+    "Terms like CLR, IL, JIT, BCL and LTS float around in conversations but you've never had them explained simply",
+    "Which C# version is released in which .NET version? And what about ASP.NET Core, .NET MAUI, EF Core versions? It's overwhelming and you just want a clear picture of how it all fits together"
+  ],
+
+  "transformation": [
+    "Clearly tell apart .NET Framework, .NET Core and modern .NET - and know which one fits your situation",
+    "Understand at a high level how C# code becomes IL, gets loaded by the CLR and runs as machine code through JIT",
+    "Build a clear mental model of how C#, .NET SDKs, Visual Studio, runtime versions and libraries fit together",
+    "Get clear on how to follow new version features and releases - so you can plan your learning and projects with confidence instead of guesswork"
+  ],
+
+  "whatYouWillDo": [
+    "Watch a clear overview of how a C# app is compiled into Common Intermediate Language and run by the CLR",
+    "See the differences between .NET Framework, .NET Core and modern .NET explained side by side with real context",
+    "Follow an explanation of Long Term Support (LTS) vs Standard Term Support (STS) releases and the yearly release cadence - so version planning stops feeling like guesswork",
+    "Listen in on a C# version history overview, with a peek at some latest features through a demo"
+  ],
+
+  "prerequisites": "Some familiarity with programming is helpful, but no .NET expertise is required. This webinar is built to be approachable - just bring your curiosity.",
+
+  "whyDifferent": [
+    "The ecosystem is explained live and visually - not as abstract theory you'll forget by tomorrow",
+    "Real-world guidance on when to use which .NET version - backed by practical scenarios",
+    "Support windows, end-of-life and why enterprises prefer LTS are explained in plain language",
+    "Recordings remain available for a period so you can cross-check and revisit any explanation at your own pace",
+    "Designed so the concepts actually stick",
+    "Live Q&A and feedback segment included so your specific questions get answered on the spot"
+  ],
+
+  "instructor": {
+    "name": "Mehfooz Kausmally",
+    "credentials": ["Certified C# Developer", "Approved Trainer"],
+    "description": "A seasoned software professional from Mauritius with over a decade of experience in the IT industry. After a successful career as a developer in multinational companies working extensively with .NET, C# and backend systems, Mehfooz transitioned into full-time professional coaching. He has already guided over 270 engineers across different technologies and levels - bringing real-world expertise and a clear, practical approach into every session."
+  },
+
+  "format": {
+    "mode": "Online, Live Webinar",
+    "language": "English",
+    "batchSize": "Open"
+  },
+
+  "paid": false,
+  "price": "",
+  "promotionPrice": "",
+  "usdPrice": "",
+  "usdPromotionPrice": "",
+  "waitingListLink": "https://forms.office.com/r/ZyU5DUFBJM",
+  "batches": [
+    {
+      "startDate": "2026-06-23",
+      "endDate": "2026-06-23",
+      "time": "20:00 - 21:30",
+      "days": ["Tuesday"],
+      "numberOfWeeks": 1,
+      "hoursPerDay": "1.5 hours",
+      "registrationLink": "https://forms.office.com/example-demystifying-dotnet-ecosystem",
+      "visible": false,
+      "fullyBooked": false
+    }
+  ]
+}
