@@ -22,11 +22,16 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(function (data) {
             renderWorkshop(data);
+            revealPage();
         })
         .catch(function () {
             showError('Workshop not found. Please check the link and try again.');
         });
 });
+
+function revealPage() {
+    document.body.classList.add('workshop-ready');
+}
 
 function renderWorkshop(data) {
     // Page title
@@ -550,4 +555,5 @@ function showError(message) {
     if (main) {
         main.innerHTML = '<section class="workshop-error section"><div class="bd-grid"><h2 class="section-title">Oops</h2><p class="workshop-text">' + escapeHtml(message) + '</p><a href="../index.html" class="button">Back to Home</a></div></section>';
     }
+    revealPage();
 }

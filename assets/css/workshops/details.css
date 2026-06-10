@@ -1,5 +1,36 @@
 /* ===== WORKSHOP DETAILS PAGE ===== */
 
+/* ===== LOADING STATE ===== */
+/* Hide the dynamic content until the workshop data has been rendered,
+   so visitors don't see an empty page skeleton flash on load. */
+.l-main {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+body.workshop-ready .l-main {
+    opacity: 1;
+}
+
+.workshop-loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    z-index: 200;
+}
+
+.workshop-loader i {
+    font-size: 3rem;
+    color: var(--first-color);
+}
+
+body.workshop-ready .workshop-loader {
+    display: none;
+}
+
 /* ===== HERO ===== */
 .workshop-hero {
     background: linear-gradient(135deg, var(--first-color), #3b4fa3);
