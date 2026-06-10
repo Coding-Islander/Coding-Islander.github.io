@@ -214,10 +214,9 @@ img {
   color: var(--second-color);
 }
 .home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
   width: 260px;
+  justify-self: center;
+  align-self: center;
 }
 .home__blob {
   fill: var(--first-color);
@@ -971,7 +970,6 @@ img {
   }
   .home__img {
     width: 300px;
-    bottom: 25%;
   }
   .home__collage {
     width: 320px;
@@ -1051,10 +1049,23 @@ img {
   }
   .home {
     padding: 8rem 0 2rem;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  .home__data {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .home__social {
+    grid-column: 1;
+    grid-row: 2;
   }
   .home__img {
     width: 400px;
-    bottom: 10%;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
   }
   .home__collage {
     width: 360px;
