@@ -60,14 +60,25 @@
   "waitingListLink": "https://forms.office.com/r/ZyU5DUFBJM",
   "batches": [
     {
-      "startDate": "2026-06-23",
-      "endDate": "2026-06-23",
-      "time": "20:00 - 21:30",
+      "startDate": "2026-07-07",
+      "endDate": "2026-07-07",
+      "time": "20:00 - 21:15",
       "days": ["Tuesday"],
       "numberOfWeeks": 1,
-      "hoursPerDay": "1.5 hours",
-      "registrationLink": "https://forms.office.com/example-demystifying-dotnet-ecosystem",
-      "visible": false,
+      "hoursPerDay": "1 hour 15 minutes",
+      "registrationLink": "https://events.teams.microsoft.com/event/df1ec937-77d8-475d-a73b-5b0fbfdc179f@012becb5-ff69-4402-83f8-5591f7021828",
+      "visible": true,
+      "fullyBooked": false
+    },
+    {
+      "startDate": "2026-07-15",
+      "endDate": "2026-07-15",
+      "time": "20:00 - 21:15",
+      "days": ["Wednesday"],
+      "numberOfWeeks": 1,
+      "hoursPerDay": "1 hour 15 minutes",
+      "registrationLink": "https://events.teams.microsoft.com/event/bf167955-8722-4411-b590-497a0f340f2b@012becb5-ff69-4402-83f8-5591f7021828",
+      "visible": true,
       "fullyBooked": false
     }
   ]
