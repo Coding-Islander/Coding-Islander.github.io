@@ -36,7 +36,7 @@
     "Complete practical exercises with live corrections so you leave knowing - not just believing your code is right"
   ],
 
-  "prerequisites": "You should be comfortable with Object Oriented Programming in C#. You don't need any prior experience with async/await or the Task Parallel Library - that's exactly what we'll build together.",
+  "prerequisites": "You should be comfortable with Object Oriented Programming in C#. You don't need any prior experience with async/await or the Task Parallel Library - that's exactly what we'll build together. If you don't feel fully up to speed with OOP, we recommend taking our Object Oriented Programming in C# Workshop first to build a solid foundation before this one.",
 
   "whyDifferent": [
     "Every concept is coded live with real examples - not explained on slides you'll forget by next week",
