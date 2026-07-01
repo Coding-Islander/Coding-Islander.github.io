@@ -277,6 +277,10 @@
     /* font-size: calc(var(--normal-font-size) * 1.2); */
 }
 
+.course__price-old {
+    text-decoration: line-through;
+}
+
 .course__form-container {
     position: relative;
     width: 100%;
@@ -292,6 +296,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    max-height: 100vh;
     border: none;
     border-radius: 0.5rem;
 }

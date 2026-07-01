@@ -56,7 +56,6 @@ function renderWorkshop(data) {
             heroContainer.classList.add('workshop-hero--has-image');
             heroImg.src = resolveWorkshopAssetUrl(data.heroImage);
             heroImg.alt = data.title || '';
-            heroImgWrap.style.display = 'block';
         }
     }
 
@@ -67,7 +66,7 @@ function renderWorkshop(data) {
             var videoSection = document.getElementById('video-section');
             var videoWrapper = document.getElementById('video-wrapper');
             if (videoSection && videoWrapper) {
-                videoSection.style.display = '';
+                videoSection.classList.remove('is-hidden');
                 var iframe = document.createElement('iframe');
                 iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId);
                 iframe.title = data.title || typeLabel + ' video';
@@ -159,9 +158,9 @@ function setOptionalText(id, text) {
     if (!el) return;
     if (text) {
         el.textContent = text;
-        el.style.display = '';
+        el.classList.remove('is-hidden');
     } else {
-        el.style.display = 'none';
+        el.classList.add('is-hidden');
     }
 }
 
@@ -250,7 +249,7 @@ function renderBatches(batches, isFree, waitingListLink) {
 
     // Show CTA message only when there are available (not fully booked) batches
     var batchesCta = document.getElementById('batches-cta');
-    if (batchesCta) batchesCta.style.display = hasAvailable ? '' : 'none';
+    if (batchesCta) batchesCta.classList.toggle('is-hidden', !hasAvailable);
 
     visibleBatches.forEach(function (batch) {
         var card = document.createElement('div');

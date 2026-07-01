@@ -53,11 +53,10 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
-sr.reveal('.testimonial__card',{ interval: 200 }); // Add this line
+sr.reveal('.home__data',{});
+sr.reveal('.home__img',{delay: 400});
+sr.reveal('.home__social-icon',{ interval: 200});
+sr.reveal('.testimonial__card',{ interval: 200 });
 
 /*==================== COURSE PAGE NAVIGATION ====================*/
 document.addEventListener('DOMContentLoaded', function() {
@@ -126,48 +125,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.toggle('active');
             });
         });
-    }
-});
-
-/*==================== COURSES CAROUSEL ====================*/
-document.addEventListener('DOMContentLoaded', function() {
-    const wrapper = document.getElementById('coursesWrapper');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    if (wrapper && prevBtn && nextBtn) {
-        const scrollAmount = 340; // Width of card + gap
-        const courseItems = wrapper.querySelectorAll('.courses__item');
-
-        // Disable navigation if only one course
-        if (courseItems.length <= 1) {
-            prevBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
-            return;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            wrapper.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        nextBtn.addEventListener('click', () => {
-            wrapper.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Hide/show navigation buttons based on scroll position
-        wrapper.addEventListener('scroll', () => {
-            prevBtn.style.opacity = wrapper.scrollLeft > 0 ? '1' : '0.5';
-            nextBtn.style.opacity = 
-                wrapper.scrollLeft < (wrapper.scrollWidth - wrapper.clientWidth) ? '1' : '0.5';
-        });
-
-        // Initial button state
-        prevBtn.style.opacity = '0.5';
     }
 });

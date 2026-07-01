@@ -16,13 +16,13 @@
     lightboxImg.setAttribute("src", src);
     lightboxImg.setAttribute("alt", alt || "");
     lightbox.classList.add("is-open");
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("no-scroll");
   }
 
   function closeLightbox() {
     lightbox.classList.remove("is-open");
     lightboxImg.setAttribute("src", "");
-    document.body.style.overflow = "";
+    document.body.classList.remove("no-scroll");
   }
 
   document.querySelectorAll(".gallery__item").forEach(function (item) {
