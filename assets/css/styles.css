@@ -190,6 +190,13 @@ img {
 }
 
 /*===== HOME =====*/
+/* Pre-hide ScrollReveal targets so they don't flash visible before the JS runs */
+/*.home__data,*/
+.home__img,
+.home__social-icon {
+  visibility: hidden;
+}
+
 .home {
   position: relative;
   row-gap: 1rem;

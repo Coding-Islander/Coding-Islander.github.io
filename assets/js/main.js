@@ -53,10 +53,11 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-sr.reveal('.home__data',{});
-sr.reveal('.home__img',{delay: 400});
-sr.reveal('.home__social-icon',{ interval: 200});
-sr.reveal('.testimonial__card',{ interval: 200 });
+// sr.reveal('.home__data',{});
+sr.reveal('.home__img',{delay: 50});
+sr.reveal('.home__social-icon',{ interval: 50});
+sr.reveal('.testimonial__card',{ duration: 600, distance: '30px', delay: 0, interval: 100 });
+
 
 /*==================== COURSE PAGE NAVIGATION ====================*/
 document.addEventListener('DOMContentLoaded', function() {
