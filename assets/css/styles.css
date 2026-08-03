@@ -192,7 +192,7 @@ img {
 /*===== HOME =====*/
 .home {
   position: relative;
-  row-gap: 5rem;
+  row-gap: 1rem;
   padding: 4rem 0 5rem;
 }
 .home__data {
@@ -207,11 +207,11 @@ img {
 }
 .home__social {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: var(--mb-2);
 }
 .home__social-icon {
   width: max-content;
-  margin-bottom: var(--mb-2);
   font-size: 1.75rem;
   color: var(--first-color);
 }
@@ -662,20 +662,25 @@ img {
     padding: 8rem 0 2rem;
     grid-template-columns: 1fr max-content;
     align-items: center;
+    row-gap: 5rem;
     column-gap: 2rem;
   }
   .home__data {
     grid-column: 1;
     grid-row: 1;
   }
-  .home__social {
+  .home__content {
     grid-column: 1;
     grid-row: 2;
+  }
+  .home__social {
+    grid-column: 1;
+    grid-row: 3;
   }
   .home__img {
     width: 400px;
     grid-column: 2;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
     align-self: center;
   }
   .home__collage {
