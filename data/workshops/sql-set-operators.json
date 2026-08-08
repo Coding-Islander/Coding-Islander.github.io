@@ -67,7 +67,7 @@
       "numberOfWeeks": 1,
       "hoursPerDay": "1.5 hours",
       "registrationLink": "https://events.teams.microsoft.com/event/7278c56f-41c2-4148-bb92-6bbff5bfaa9c@012becb5-ff69-4402-83f8-5591f7021828",
-      "visible": true,
+      "visible": false,
       "fullyBooked": false
     },
     {
@@ -78,7 +78,7 @@
       "numberOfWeeks": 1,
       "hoursPerDay": "1.5 hours",
       "registrationLink": "https://events.teams.microsoft.com/event/6dfe6557-acb2-495a-8231-fa21bed27007@012becb5-ff69-4402-83f8-5591f7021828",
-      "visible": true,
+      "visible": false,
       "fullyBooked": false
     }
   ]
