@@ -61,6 +61,15 @@
     "batchSize": "15 participants (Small group format)"
   },
 
+  "badge": {
+    "enabled": true,
+    "code": "ASYNC",
+    "title": "Async Programming Specialist",
+    "image": "assets/img/workshops/badges/csharp-async-programming-badge.png",
+    "description": "Coding Islander workshop completion badge for Async Programming Specialist.",
+    "skills": ["C#", ".NET", "async/await", "Task Parallel Library", "Concurrency"]
+  },
+
   "paid": true,
   "price": "Rs 5,500",
   "promotionPrice": "Rs 3,950",

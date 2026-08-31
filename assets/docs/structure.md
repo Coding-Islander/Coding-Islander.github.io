@@ -184,6 +184,54 @@ Pages reserved for the workshop section of the site.
 - Currently contains rough notes and placeholder metadata fields rather than finished HTML.
 - Appears to be an early content sketch for workshop information such as mode, batch size, category, pricing, schedule, prerequisites, and instructor.
 
+## Digital Credential / Badge System
+
+Participants who complete a workshop receive a shareable skills badge. The badge image is
+workshop-specific and deliberately contains no participant name, so one image serves every
+participant of that workshop. The credential ID is the only source of truth.
+
+### `.nojekyll`
+- Tells GitHub Pages to serve the files verbatim instead of running them through Jekyll.
+
+### `data/credentials.json`
+- Public credential registry, keyed by credential ID.
+- Each value holds only `participantName`, `workshopId` (a workshop slug), `issueDate` (`YYYY-MM-DD`) and `status` (`active` or `revoked`).
+- No workshop information is duplicated here; it is read from the workshop's own JSON file.
+- Credential ID convention: `CI-[WORKSHOP CODE]-[YYYYMMDD]-[SEQUENCE]`, for example `CI-ASYNC-20260801-001`. IDs must be unique.
+
+### `badge` block in `data/workshops/{slug}.json`
+- Optional per-workshop block that enables badge issuing: `enabled`, `code`, `title`, `image`, `description`, `skills`.
+- A workshop without a `badge` block issues no badge.
+
+### `badges/index.html`
+- Landing page explaining the badge system, linking to the verification page and the workshops catalogue.
+
+### `badges/verify.html`
+- Public verification page where anyone can enter a credential ID and check it.
+
+### `badges/{slug}/index.html`
+- One static badge page per workshop, for example `badges/csharp-oop/index.html`.
+- Holds workshop-specific Open Graph metadata, because LinkedIn's crawler does not run JavaScript and would otherwise see identical previews for every credential.
+- The participant is rendered client-side from `?id=`, so it never appears in the link preview.
+
+### `assets/js/badges/credential-config.js`
+- Site origin, organisation name, the configurable LinkedIn organisation ID, data paths and the ID patterns.
+
+### `assets/js/badges/credential-core.js`
+- Shared, DOM-free lookup and LinkedIn URL building, so the badge pages and the verification page apply identical rules.
+
+### `assets/js/badges/badge-page.js`
+- Renders a credential on a per-workshop badge page and wires the LinkedIn actions.
+
+### `assets/js/badges/verify-page.js`
+- Drives the verification form.
+
+### `assets/css/badges/credential.css`
+- Styling for the badge pages, the verification page and the badge landing page.
+
+### `assets/img/workshops/badges/`
+- Workshop badge images, named `{slug}-badge.png` and sized 1200x630 for LinkedIn previews.
+
 ## Current Implementation Status
 
 ### Live pages
